@@ -1,0 +1,16 @@
+.card {
+  all: unset; /* reset button default styles */
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--pico-muted-color);
+  box-shadow: var(--pico-card-box-shadow);
+  transition: transform 0.2s ease, background 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background: var(--pico-muted-hover-color, #f0f0f0);
+}
