@@ -1,0 +1,10 @@
+
+ran: npx sv create
+selected:
+- sveltekit minimal
+- Javascript with JSDoc comments
+- no add-ons (no ESLint)
+- using npm for dependencies
+
+Libraries used
+- @sveltejs/enhanced-img

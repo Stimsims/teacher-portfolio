@@ -4,8 +4,11 @@
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
   import TeachingExampleCard from '$lib/Card/Card.svelte';
-  import TeachingExampleModal from '$lib/Modal/Modal.svelte';
+  import Modal from '$lib/Modal/Modal.svelte';
   import DataList from '$lib/DataList/DataList.svelte'
+  import DocumentationView from '$lib/DocumentationView/DocumentationView.svelte'
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -82,20 +85,18 @@
 
   <main>
     <section id="home"><h2>Home</h2><p>Welcome to my teacher portfolio!</p></section>
-    <section id="about"><h2>About Me</h2><p>I am a passionate educator...</p></section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate educator...</p>
+        <ImageCollage />
+    </section>
     <section id="math">
         <h2>Math</h2><p>Here's how I teach mathematics...</p>
         <DataList examples={data.examples} on:select={(e) => selected = e.detail} />
-        <!-- Render cards from the data -->
-        <!-- {#each examples as ex}
-        <TeachingExampleCard {...ex} />
-        {/each} -->
-        <!-- Show modal if one is selected -->
         {#if selected}
-        <TeachingExampleModal
-            {...selected}
-            onClose={() => selected = null}
-        />
+            <Modal onClose={() => (selected = null)}>
+                <DocumentationView example={selected} />
+            </Modal>
         {/if}
     </section>
     <section id="footer"><h2>Contact</h2><p>Get in touch: email@example.com</p></section>
