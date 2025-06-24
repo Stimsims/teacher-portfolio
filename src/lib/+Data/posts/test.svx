@@ -2,11 +2,29 @@
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
   import img1 from './../../../assets/images/L3 habitat game.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
   import img2 from './../../../assets/images/zelda.jpg.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+
+  import BarChart from '$lib/Charts/Bar.svelte';
+  import PieChart from '$lib/Charts/Pie.svelte';
+
+  let series = [
+      {
+        name: "sales",
+        data: [30, 40, 35],
+      },
+  ];
+  let xaxis = {
+      categories: ["A", "B", "C"],
+  };
+
+  let pie_series = [10, 12, 5, 8, 12]
+  let pie_categories = {"categories": ["Comedy", "Action", "SciFi", "Drama", "Horror"]}
 </script>
 
 # Migration Game
 
 Students learned about bird migration patterns by simulating a journey between habitats.
 
+<BarChart title="Fruit Popularity" series={series} xaxis={xaxis} />
+<!-- <PieChart title="Movie Preferences" series={pie_series} xaxis={pie_categories}/> -->
 
 <ImageCollage images={[img1, img2]}  />

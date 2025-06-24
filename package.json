@@ -28,6 +28,8 @@
 	"dependencies": {
 		"@picocss/pico": "^2.1.1",
 		"@sveltejs/enhanced-img": "^0.6.0",
-		"mdsvex": "^0.12.6"
+		"apexcharts": "^4.7.0",
+		"mdsvex": "^0.12.6",
+		"svelte-apexcharts": "^1.0.2"
 	}
 }

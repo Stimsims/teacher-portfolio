@@ -9,8 +9,8 @@
   import DocumentationView from '$lib/DocumentationView/DocumentationView.svelte'
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
-
-
+  import PieChart from '$lib/Charts/Pie.svelte';
+  //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
   const sections = [
@@ -30,6 +30,7 @@
       }
     }
   };
+
   
 </script>
 
@@ -88,6 +89,7 @@
     <section id="home">
         <h2>Home</h2>
         <p>Welcome to my teacher portfolio!</p>
+        <PieChart title="Movie Preferences" series={[10, 12, 5, 8, 12]} xaxis={{"categories": ["Comedy", "Action", "SciFi", "Drama", "Horror"]}}/>
         <MarkdownList />
     </section>
     <section id="about">
