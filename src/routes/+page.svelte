@@ -8,6 +8,7 @@
   import DataList from '$lib/DataList/DataList.svelte'
   import DocumentationView from '$lib/DocumentationView/DocumentationView.svelte'
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import MarkdownList from '$lib/DataList/MarkdownList.svelte';
 
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
@@ -84,7 +85,11 @@
   </nav>
 
   <main>
-    <section id="home"><h2>Home</h2><p>Welcome to my teacher portfolio!</p></section>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to my teacher portfolio!</p>
+        <MarkdownList />
+    </section>
     <section id="about">
         <h2>About Me</h2>
         <p>I am a passionate educator...</p>

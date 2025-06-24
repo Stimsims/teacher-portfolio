@@ -1,0 +1,12 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import img1 from './../../../assets/images/L3 habitat game.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img2 from './../../../assets/images/zelda.jpg.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+</script>
+
+# Migration Game
+
+Students learned about bird migration patterns by simulating a journey between habitats.
+
+
+<ImageCollage images={[img1, img2]}  />
