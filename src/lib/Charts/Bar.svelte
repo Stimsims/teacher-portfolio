@@ -1,6 +1,5 @@
 <script>
-  //import { chart } from 'svelte-apexcharts';
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   /** @type {{ categories: string[] } } */
   export let xaxis = []; // e.g. { categories: ['A', 'B', 'C'] }
   /** @type {{
@@ -26,6 +25,7 @@
     chart = mod.chart;
     mounted = true;
   });
+ 
 </script>
 
 

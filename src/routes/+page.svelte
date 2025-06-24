@@ -10,6 +10,7 @@
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';
+  import LineChart from '$lib/Charts/Line.svelte';
   //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -89,6 +90,11 @@
     <section id="home">
         <h2>Home</h2>
         <p>Welcome to my teacher portfolio!</p>
+        <LineChart
+            xaxis={{ categories: ['Mon', 'Tue', 'Wed'] }}
+            series={[{ name: 'Visitors', data: [30, 80, 45] }, { name: 'Employees', data: [5, 18, 16] }]}
+            title="Weekly Traffic"
+        />
         <PieChart title="Movie Preferences" series={[10, 12, 5, 8, 12]} xaxis={{"categories": ["Comedy", "Action", "SciFi", "Drama", "Horror"]}}/>
         <MarkdownList />
     </section>
