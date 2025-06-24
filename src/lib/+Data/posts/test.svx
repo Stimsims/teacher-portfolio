@@ -5,6 +5,7 @@
 
   import BarChart from '$lib/Charts/Bar.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';
+  import LineChart from '$lib/Charts/Line.svelte';
 
   let series = [
       {
@@ -18,6 +19,8 @@
 
   let pie_series = [10, 12, 5, 8, 12]
   let pie_categories = {"categories": ["Comedy", "Action", "SciFi", "Drama", "Horror"]}
+  let line_categories = { categories: ['Mon', 'Tue', 'Wed'] }
+  let line_series = [{ name: 'Visitors', data: [30, 80, 45] }, { name: 'Employees', data: [5, 18, 16] }]
 </script>
 
 # Migration Game
@@ -25,6 +28,11 @@
 Students learned about bird migration patterns by simulating a journey between habitats.
 
 <BarChart title="Fruit Popularity" series={series} xaxis={xaxis} />
-<!-- <PieChart title="Movie Preferences" series={pie_series} xaxis={pie_categories}/> -->
+<PieChart title="Movie Preferences" series={pie_series} xaxis={pie_categories}/>
+  <LineChart
+      xaxis={line_categories}
+      series={line_series}
+      title="Weekly Traffic"
+  />
 
 <ImageCollage images={[img1, img2]}  />

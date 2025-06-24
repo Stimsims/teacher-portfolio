@@ -2,3 +2,31 @@
 html {
   scroll-behavior: smooth;
 }
+
+a {
+  position: relative;
+  color: red;
+  text-decoration: none;
+  z-index: 1;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at center, #ffcbf2, #a3c4f3, #d0f4de, #ffd6a5);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  border-radius: 9999px;
+  z-index: -1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+a:hover::before,
+a:focus::before {
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scale(1);
+}
