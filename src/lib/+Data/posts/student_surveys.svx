@@ -1,0 +1,17 @@
+<script>
+  import PieChart from '$lib/Charts/Pie.svelte';
+
+
+  let pie_series = [1, 11, 6]
+  let pie_categories = {"categories": [
+    "Why do we need addition?", 
+    "Why do we need 3 strategies for addition?", 
+    "How do I do the compensation strategy?", ]}
+</script>
+
+# The Importance of Questions
+
+When a student said "I don't understand" during the lesson sequence for the three addition strategies, it was apparent that question ran deeper than the student knew how to verbalise. 
+
+<PieChart title="Verbalising Questions" series={pie_series} xaxis={pie_categories}/>
+

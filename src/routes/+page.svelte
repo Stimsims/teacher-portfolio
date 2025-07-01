@@ -11,6 +11,10 @@
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';
   import LineChart from '$lib/Charts/Line.svelte';
+
+   import { examples } from '$lib/+Data/test-md-paths.js';
+  import { examples as math_posts } from '$lib/+Data/math_posts.js';
+
   //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -38,10 +42,11 @@
 <svelte:window on:scroll={handleScroll} />
 
 <style>
+
   .layout {
     display: flex;
   }
-  nav {
+  nav.sidebar {
     width: 180px;
     position: sticky;
     top: 0;
@@ -49,14 +54,22 @@
     padding: 1rem;
     background: var(--pico-muted-border-color);
   }
-  nav ul {
-    list-style: none;
+  nav.sidebar ul {
+    display: block;         /* Override Pico's display: flex */
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
-  nav li {
+  nav.sidebar li {
     margin-bottom: 1rem;
+    display:block;
   }
-  nav a.active {
+  nav.sidebar a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  nav.sidebar a.active {
     font-weight: bold;
     text-decoration: underline;
   }
@@ -68,10 +81,22 @@
     padding: 100px 0;
     border-bottom: 1px solid var(--pico-muted-border-color);
   }
+
+  .page {
+    min-height: 100vh; /* Make each section at least one full viewport height */
+    display: flex;     /* Enable flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Optional: horizontal centering */
+    flex-direction: column;  /* Keep text and elements stacked */
+    padding: 2rem;           /* Still allow for some breathing space */
+    border-bottom: 5px solid var(pico-background-pink-600);
+    box-sizing: border-box;
+  }
+
 </style>
 
 <div class="layout">
-  <nav>
+  <nav class="sidebar">
     <ul>
       {#each sections as section}
         <li>
@@ -87,31 +112,35 @@
   </nav>
 
   <main>
-    <section id="home">
+    <section id="home" class="page">
         <h2>Home</h2>
         <p>Welcome to my teacher portfolio!</p>
-        <LineChart
-            xaxis={{ categories: ['Mon', 'Tue', 'Wed'] }}
-            series={[{ name: 'Visitors', data: [30, 80, 45] }, { name: 'Employees', data: [5, 18, 16] }]}
-            title="Weekly Traffic"
-        />
-        <PieChart title="Movie Preferences" series={[10, 12, 5, 8, 12]} xaxis={{"categories": ["Comedy", "Action", "SciFi", "Drama", "Horror"]}}/>
-        <MarkdownList />
     </section>
-    <section id="about">
+    <section id="about" class="page">
         <h2>About Me</h2>
         <p>I am a passionate educator...</p>
-        <ImageCollage />
     </section>
-    <section id="math">
+        </section>
+        <section id="professional_development" class="page">
+        <h2>Here are some course badges I've completed</h2>
+        <p>Microsoft licenses, AI licenses</p>
+    </section>
+    <section id="math" class="page">
         <h2>Math</h2><p>Here's how I teach mathematics...</p>
-        <DataList examples={data.examples} on:select={(e) => selected = e.detail} />
+        <MarkdownList examples={math_posts}/>
+        <!-- <DataList examples={math_posts} on:select={(e) => selected = e.detail} /> -->
         {#if selected}
             <Modal onClose={() => (selected = null)}>
                 <DocumentationView example={selected} />
             </Modal>
         {/if}
     </section>
-    <section id="footer"><h2>Contact</h2><p>Get in touch: email@example.com</p></section>
+    <section id="technology" class="page">
+        <h2>Technology</h2><p>With a background in programming, web development and AI product development...</p>
+    </section>
+    <section id="lesson_plans" class="page">
+        <h2>Lesson Plans</h2>
+    </section>
+    <section id="footer" class="page"><h2>Contact</h2><p>Get in touch: email@example.com</p></section>
   </main>
 </div>

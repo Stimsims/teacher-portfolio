@@ -1,0 +1,16 @@
+git init
+git add .
+git commit -m "Initial commit"
+npm run deploy
+"deploy": "npm run build && gh-pages -d build -b gh-pages"
+will:
+Run your build (npm run build)
+Take the build/ folder
+Push it to a branch called gh-pages (creating it if needed)
+Commit it automatically
+Only includes static files — no source code, no .svelte, no node_modules
+
+Create a repo
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git branch -M main
+git push -u origin main

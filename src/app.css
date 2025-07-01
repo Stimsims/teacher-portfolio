@@ -1,32 +1,81 @@
-/* src/app.css */
 html {
   scroll-behavior: smooth;
 }
-
-a {
-  position: relative;
-  color: red;
-  text-decoration: none;
-  z-index: 1;
+.opal-text {
+  background: linear-gradient(
+    80deg,
+    #0f0c29,
+    #131191,
+    #7f5af0,
+    #1a9988,
+    #0f0c29,
+    #c71737
+  );
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
-a::before {
+a.opal-text {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  z-index: 0; /* ensure it's above the underline */
+}
+
+/* Underline */
+a.opal-text::after {
   content: '';
   position: absolute;
-  top: 50%; left: 50%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle at center, #ffcbf2, #a3c4f3, #d0f4de, #ffd6a5);
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
+  left: 0;
+  bottom: -0.1em; /* shift lower */
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    80deg,
+    #0f0c29,
+    #131191,
+    #7f5af0,
+    #1a9988,
+    #0f0c29,
+    #c71737
+  );
+  background-size: 80%;
+  background-position: 0% 50%;
   border-radius: 9999px;
-  z-index: -1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
+  transform: scaleX(0.6);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform-origin: center;
+  z-index: -1; /* put it under the text */
+}
+a.opal-text:hover::after,
+a.opal-text:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
-a:hover::before,
-a:focus::before {
-  opacity: 0.6;
-  transform: translate(-50%, -50%) scale(1);
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcbf2, #a3c4f3, #d0f4de, #ffd6a5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.gradient-text:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.pastel-glow {
+  color: rgb(41, 4, 41); /* or inherit */
+  text-shadow:
+    0 0 10px #d672bd,
+    0 0 18px #3b6bae;
 }

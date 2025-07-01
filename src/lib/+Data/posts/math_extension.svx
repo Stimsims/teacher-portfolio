@@ -1,0 +1,21 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import img1 from './../../../assets/images/math_extension/extension compensation strategy 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import img2 from './../../../assets/images/math_extension/extension compensation strategy 3.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img4 from './../../../assets/images/math_extension/extension compensation strategy.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import restaurant_addition from './../../../assets/images/math_extension/restaurant_addition.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+</script>
+
+# Extension Challenges
+
+When working with students, to ensure all students the lesson is in their proximal zone of development, I design activities for multiple skill levels, with extension questions with a 'high ceiling'. The initial simple questions serve as a review, while the gradual increase to more cognitively complex variations of the lesson question give all students the opportunity for productive struggle (Boaler, 2022). I listen to my students, paying attention to their interests and funds of knowledge, so that I can contextualize mathematics in contexts of personal relevance, to support more enthusiastic discussions about math (Van de Walle et al, 2019). The use of mathematical language in social contexts is the anvil where lessons become meaningful, according to social constructivists like Vygotsky (Dimitriadis and Kamberelis, 2006). 
+
+#### Examples of class extension activities
+- addition unit - ordering from a menu. Students selected preferred food or toys from menus and added the prices together to get the total. Students started with two, but could choose to add more when ready.
+<ImageCollage images={[restaurant_addition]}  />
+
+- statistics unit - students were asked to create simple survey questions that would generate interesting data to graph. The key learning took place when asking how to graph different information and why some questions were more difficult to display on a graph than others.
+- measurement unit - devising sports tests to measure strength or strength. The discussion about fairness and accuracy proved to be passionate and excellent mediums for developing students understanding of units of measurement, reliability and validity.
+
+- any unit - at the simplest levels, rewarding students for challenging themselves proved an excellent way to have students think about what 'harder' meant in mathematics.
+<ImageCollage images={[img1, img2,  img4]}  />

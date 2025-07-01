@@ -1,4 +1,4 @@
-.modal-backdrop {
+/* .modal-backdrop {
   all: unset;
   position: fixed;
   top: 0;
@@ -10,10 +10,59 @@
   align-items: flex-start;
   justify-content: flex-end;
   z-index: 1000;
-  padding: 5vh 2vh 5vh 8vh; /* space on top/right/bottom + wide strip on left */
+  padding: 5vh 2vh 5vh 8vh;
   box-sizing: border-box;
   cursor: pointer;
+} */
+.modal-backdrop {
+  all: unset;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 1000;
+  padding: 5vh 2vh 5vh 8vh;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden; /* prevent overflow from animated background */
 }
+
+.modal-backdrop::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle at 25% 25%, #e677ca, transparent 60%),
+              radial-gradient(circle at 75% 25%, #6899de, transparent 60%),
+              radial-gradient(circle at 25% 75%, #0df566, transparent 60%),
+              radial-gradient(circle at 35% 35%, #e2db09, transparent 80%);
+  opacity: 0.5;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  animation: rainbowSwirl 20s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes rainbowSwirl {
+  0% {
+    transform: translate(-50%, -50%)  rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%)  rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 
 .modal-container {
   background: rgba(255, 255, 255, 0.95);

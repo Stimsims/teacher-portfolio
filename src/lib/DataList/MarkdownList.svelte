@@ -1,7 +1,8 @@
 <script>
-  import { examples } from '$lib/+Data/test-md-paths.js';
+ 
   import Modal from '$lib/Modal/Modal.svelte';
 
+  export let examples;
   let markdownComponent = null;
   let currentExample = null;
 
@@ -20,7 +21,7 @@
 <section class="example-list">
   {#each examples as example}
     <div class="example-card">
-      <h2><a on:click={() => openModal(example)}>{example.title}</a></h2>
+      <h2><a class="opal-text" on:click={() => openModal(example)}>{example.title}</a></h2>
       <p>{example.summary}</p>
     </div>
   {/each}
