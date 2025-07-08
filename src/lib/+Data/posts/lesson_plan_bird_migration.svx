@@ -1,0 +1,127 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import bird_migration from './../../../assets/images/math_extension/bird_migration.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+</script>
+
+
+
+## Lesson Plan
+## Animal Needs: Migratory Animals – The Rainbow Bee-eater
+
+**Year Level** Grade 2
+
+**Subject** Science
+
+**Resources:** BBC Bitesize Food Chain Video, eBird Migration Map, space to play a game of tag, science journals
+
+**Presumed knowledge:** Bar charts
+
+**Pedagogy:** 4E's: engage, explore, explain, evaluate
+
+**Learning intention:** To gather data on winter food availability and migratory animal survival rates
+
+**Success Criteria:** 
+- I can describe how an animals body parts help them to survive the winter
+- I can describe how seasons effect animal survival
+- I can make a chart of the data gathered about bird survival and food availability, understand how bodily features help them survive the winter
+
+#### Lesson Summary
+Resources: sacks/cones to represent food
+Engage:
+- Watch the **[BBC Bitesize Food Chain video](https://www.bbc.co.uk/teach/class-clips-video/articles/zbr8d6f)**. ask "What happens if one part of the chain disappears?" Connect with winter and survival rates.
+- Ask non-volunteer students with EDI sticks to organise a food chain on whiteboard, using printed food and animal cards
+- Watch the migration video: https://www.youtube.com/watch?v=7TmFJCOwYlI
+Explore:
+- play three rounds of migration tag. Students are predators or prey. Prey have to pick up a piece of food and avoid predators to survive. Each round has less food (12, 8, 4). Ask two students to record how many 'birds' survive in each round.
+- teacher models drawing bar chart of prey survival rates on the board. Students copy into their inquiry books.
+Explain: 
+- introduce the Australian rainbow honey eater: **Rainbow Bee-eater Introduction**   https://birdlife.org.au/bird-profiles/rainbow-bee-eater/ and their migration patterns with the **[eBird migration map](https://science.ebird.org/status-and-trends/species/rabeat1/range-map)**
+- Explain the body parts God gave the honey eater to help it survive.
+Evaluate:
+- teacher asks questions connecting low primary producer food in winter with survival rates. 
+
+---
+
+### Engage (10 minutes)
+
+Begin by activating prior knowledge about food chains:
+- Watch the **[BBC Bitesize Food Chain video](https://www.bbc.co.uk/teach/class-clips-video/articles/zbr8d6f)**.
+- Ask: "What happens if one part of the chain disappears?" Ask students to predict what happens in winter. 
+
+Model making a food chains (corn -> grasshopper -> bird -> fox) on the board, ask students to make similar ones on whiteboard.
+Discuss:
+- "What happens when food disappears?"
+- "When do we have less food outside?" (Guide them to **winter**.)
+
+Watch the migration video: https://www.youtube.com/watch?v=7TmFJCOwYlI
+
+
+---
+
+### Explore (20 minutes)
+Investigate **why and how** animals migrate, focusing on the Rainbow Bee-eater:
+1. Play **Migration Tag Game**  
+   Simulate real-world survival:
+   - Roll dice to determine:
+     - Number of **birds** (students running)
+     - Number of **predators** (students tagging)
+     - Number of **food pieces** (cones or beanbags)
+   - Birds run from one "habitat" to another, picking up food while avoiding predators.
+   Important:
+   - Each new round has **less food** available.
+   - Students record:
+     - Number of starting birds
+     - Amount of food
+     - Number of surviving birds
+
+Questions: "Was it harder when food ran out?"
+
+### Explain (5 minutes)
+1. **Rainbow Bee-eater Introduction**   https://birdlife.org.au/bird-profiles/rainbow-bee-eater/
+   Explain:
+   - Eats flying insects like bees and wasps.
+   - Nests in burrows to stay safe.
+   - God gave it strong wings for long flights, sharp eyes for spotting prey, and a long beak to snatch insects in the air.
+   -  Show the **[eBird migration map](https://science.ebird.org/status-and-trends/species/rabeat1/range-map)**:
+Gather children back on mat after tag game and explain next activity. Discuss how the Rainbow Bee-eater’s body parts meet its needs for migration and survival:
+
+| Body Part      | How it Helps During Migration   | What Need it Meets |
+| -------------- | ------------------------------- | ------------------ |
+| **Wings**      | Fly long distances to find food | Movement, Food     |
+| **Long beak**  | Catch insects while flying      | Eating             |
+| **Sharp eyes** | Spot prey while flying          | Finding food       |
+
+Ask:
+- "What would happen if the Rainbow Bee-eater had tiny wings?"
+- "Why is it important that their beak can grab food while flying?"
+- "How do sharp eyes help them during migration?"
+
+Emphasize:  
+**God gave these birds the tools they need to survive—even when they have to travel very far to find food.**
+
+
+---
+
+### Evaluate (15 minutes)
+
+Display the data the students simulated during the game of tag about bird migration survival and food on the board. Students reflect and record their learning in their **science activity books**:
+1. **Draw a Bar Graph:**  
+   - X-axis = Amount of food (e.g., lots, medium, little)
+   - Y-axis = Number of birds that survived
+   - Students label the graph and color it neatly.
+1. **Draw a Rainbow Bee-eater habitat:**
+   - Include insects, burrow, predators like snakes, and safe trees.
+   - Label one special feature God gave the bird (e.g., "strong wings for flying far").
+**Sentence Starters for Reflection:**
+- "When there was more food, _______ birds survived."
+- "When there was less food, _______ birds survived."
+- "God gave the Rainbow Bee-eater _______ to help it migrate and find food."
+
+
+
+## Student Work
+<ImageCollage images={[bird_migration]}  />
+//TODO: Graph on student quiz success rates at end of class
+
+## Student Feedback
+- "Can we do the migration tag game again?"

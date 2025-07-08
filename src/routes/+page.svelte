@@ -115,13 +115,14 @@
     <section id="home" class="page">
         <h2>Home</h2>
         <p>Welcome to my teacher portfolio!</p>
+        <p>Current status: Pre-service teacher, 2/4 terms complete</p>
+        <p>CV: math graduate certificate in calculus and linear algebra, safe ministry officer and administration at Church.</p>
     </section>
     <section id="about" class="page">
         <h2>About Me</h2>
-        <p>I am a passionate educator...</p>
+        <p>Games for fluency, self-assessment for growth, celebrating mistakes, connecting with funds of knowledge</p>
     </section>
-        </section>
-        <section id="professional_development" class="page">
+    <section id="professional_development" class="page">
         <h2>Here are some course badges I've completed</h2>
         <p>Microsoft licenses, AI licenses</p>
     </section>
@@ -137,9 +138,6 @@
     </section>
     <section id="technology" class="page">
         <h2>Technology</h2><p>With a background in programming, web development and AI product development...</p>
-    </section>
-    <section id="lesson_plans" class="page">
-        <h2>Lesson Plans</h2>
     </section>
     <section id="footer" class="page"><h2>Contact</h2><p>Get in touch: email@example.com</p></section>
   </main>
