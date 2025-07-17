@@ -1,0 +1,21 @@
+/* animation.css */
+
+/* Generic fade-in with optional slight upward motion */
+.fade-in {
+  opacity: 0;
+  animation: fadeInSlide 0.8s ease forwards;
+  animation-delay: 0.3s; /* small delay */
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* You can add more animations here later, e.g. fade-in-left, fade-scale, etc. */

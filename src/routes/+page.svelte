@@ -19,61 +19,16 @@
   //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
-  const sections = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Me' },
-    { id: 'math', label: 'Math' },
-    { id: 'footer', label: 'Footer' }
-  ];
-
-  let currentSection = 'home';
-
-  const handleScroll = () => {
-    for (const section of sections) {
-      const el = document.getElementById(section.id);
-      if (el && el.getBoundingClientRect().top <= 100) {
-        currentSection = section.id;
-      }
-    }
-  };
-
   
 </script>
 
-<svelte:window on:scroll={handleScroll} />
 
 <style>
 
   .layout {
     display: flex;
   }
-  nav.sidebar {
-    width: 180px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    padding: 1rem;
-    background: var(--pico-muted-border-color);
-  }
-  nav.sidebar ul {
-    display: block;         /* Override Pico's display: flex */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  nav.sidebar li {
-    margin-bottom: 1rem;
-    display:block;
-  }
-  nav.sidebar a{
-    display: block;
-    color: inherit;
-    text-decoration: none;
-  }
-  nav.sidebar a.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
+
   main {
     padding: 2rem;
     flex: 1;
@@ -97,20 +52,6 @@
 </style>
 
 <div class="layout">
-  <nav class="sidebar">
-    <ul>
-      {#each sections as section}
-        <li>
-          <a
-            href={`#${section.id}`}
-            class:active={currentSection === section.id}
-          >
-            {section.label}
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
 
   <main>
     <section id="home" class="page">
