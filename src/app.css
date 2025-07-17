@@ -2,6 +2,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Fonts */
+:root {
+  --font-body: "Poiret One", "Gill Sans", "Helvetica Neue", sans-serif;
+  --font-header: "Playfair Display", Georgia, serif;
+}
+
+/* Body text & links use Poiret One */
+body {
+  font-family: var(--font-body);
+}
+
+a {
+  font-family: var(--font-body);
+}
+
+/* Headers use Playfair for contrast */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+/* ✅ Override: links inside headers inherit header font */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-family: var(--font-header);
+}
+
 /* Respect Light mode tweaks */
 @media (prefers-color-scheme: light) {
   body, .background {
@@ -170,4 +199,12 @@ aside {
   .sidebar-toggle {
     display: inline-block;
   }
+}
+aside nav a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+aside nav a:hover {
+  text-decoration: underline;
 }
