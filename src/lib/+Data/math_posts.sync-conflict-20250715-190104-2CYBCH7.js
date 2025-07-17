@@ -14,10 +14,5 @@ export const examples = [
     title: 'Cross-curricular Lesson Plan - Math and Biology',
     summary: "Maths is a language, it's strengths are best understood when studying the natural world. A game of 'migration' tag sharpened kids data gathering and display skills, while keeping them excited and active.",
     details: () => import('$lib/+Data/posts/lesson_plan_bird_migration.svx')
-  },
-  {
-    title: 'Easy Estimation Warm Ups',
-    summary: "Quick estimation games are great for review, while allowing students to reason about math in a low stakes game.",
-    details: () => import('$lib/+Data/posts/estimation_games.svx')
   }
 ];

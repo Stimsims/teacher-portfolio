@@ -29,12 +29,12 @@
     on:click|stopPropagation
     transition:fade={{ duration: 150 }}
   >
-    <div class="modal-content" transition:scale={{ duration: 300 }}>
+    <div class="modal-content background" transition:scale={{ duration: 300 }}>
       <div class="modal-scroll-area">
         <slot />
       </div>
 
-      <button class="modal-close-button" on:click={onClose}>
+      <button class="modal-close-button background" on:click={onClose}>
         Close
       </button>
     </div>

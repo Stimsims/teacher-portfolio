@@ -14,6 +14,30 @@
   box-sizing: border-box;
   cursor: pointer;
 } */
+  /* Respect Light mode tweaks */
+ @media (prefers-color-scheme: light) {
+  .modal-backdrop {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .modal-backdrop::before {
+    background: radial-gradient(circle at 25% 25%, #e677ca, transparent 60%),
+                  radial-gradient(circle at 75% 25%, #6899de, transparent 60%),
+                  radial-gradient(circle at 25% 75%, #0df566, transparent 60%),
+                  radial-gradient(circle at 35% 35%, #e2db09, transparent 80%);
+    }
+ }
+ /* Respect Dark mode tweaks */
+@media (prefers-color-scheme: dark) {
+  .modal-backdrop {
+    background: rgba(43, 4, 63, 1);
+  }
+  .modal-backdrop::before {
+    background: radial-gradient(circle at 25% 25%, #c31294, transparent 80%),
+                  radial-gradient(circle at 75% 25%, #04439a, transparent 80%),
+                  radial-gradient(circle at 25% 75%, #03b347, transparent 80%),
+                  radial-gradient(circle at 35% 35%, #dc8606, transparent 80%);
+    }
+}
 .modal-backdrop {
   all: unset;
   position: fixed;
@@ -21,7 +45,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -39,14 +62,10 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle at 25% 25%, #e677ca, transparent 60%),
-              radial-gradient(circle at 75% 25%, #6899de, transparent 60%),
-              radial-gradient(circle at 25% 75%, #0df566, transparent 60%),
-              radial-gradient(circle at 35% 35%, #e2db09, transparent 80%);
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  animation: rainbowSwirl 20s linear infinite;
+  animation: rainbowSwirl 15s linear infinite;
   z-index: -1;
   pointer-events: none;
 }
@@ -65,7 +84,6 @@
 
 
 .modal-container {
-  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   width: 90vw;
@@ -94,7 +112,6 @@
 .modal-close-button {
   flex-shrink: 0;
   width: 100%;
-  background: #f3f3f3;
   border: none;
   padding: 1rem;
   font-size: 1.1rem;

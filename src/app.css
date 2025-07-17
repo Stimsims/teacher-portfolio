@@ -1,16 +1,68 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Respect Light mode tweaks */
+@media (prefers-color-scheme: light) {
+  body, .background {
+    background: #fff;
+    color: #222;
+  }
+
+  .opal-text {
+    background: linear-gradient(
+      80deg,
+      #0f0c29,
+      #131191,
+      #7f5af0,
+      #1a9988,
+      #0f0c29,
+      #c71737
+    );
+  }
+
+  /* Underline */
+  a.opal-text::after {
+    background: linear-gradient(
+      80deg,
+      #0f0c29,
+      #131191,
+      #7f5af0,
+      #1a9988,
+      #0f0c29,
+      #c71737
+    );
+  }
+}
+
+/* Respect Dark mode tweaks */
+@media (prefers-color-scheme: dark) {
+  body, .background{
+    background: #111;
+    color: #ddd;
+  }
+
+  .opal-text {
+    background: linear-gradient(
+      80deg,
+      #c0bfff,
+      #7f7ff0,
+      #a0e0d0,
+      #ff7a7a,
+      #d08fff
+    );
+  }
+
+  .pastel-glow {
+    color: #eee;
+    text-shadow:
+      0 0 10px #f09ed9,
+      0 0 18px #7bb6ff;
+  }
+}
+
+
 .opal-text {
-  background: linear-gradient(
-    80deg,
-    #0f0c29,
-    #131191,
-    #7f5af0,
-    #1a9988,
-    #0f0c29,
-    #c71737
-  );
   background-size: 100% 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -34,15 +86,6 @@ a.opal-text::after {
   bottom: -0.1em; /* shift lower */
   height: 2px;
   width: 100%;
-  background: linear-gradient(
-    80deg,
-    #0f0c29,
-    #131191,
-    #7f5af0,
-    #1a9988,
-    #0f0c29,
-    #c71737
-  );
   background-size: 80%;
   background-position: 0% 50%;
   border-radius: 9999px;
@@ -78,4 +121,53 @@ a.opal-text:focus::after {
   text-shadow:
     0 0 10px #d672bd,
     0 0 18px #3b6bae;
+}
+
+
+
+/* Sidebar Styles */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar default (desktop) */
+aside {
+  background: var(--pico-background, #f7f7f7);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar toggle button (hidden by default) */
+.sidebar-toggle {
+  display: none;
+  margin: 1rem;
+}
+
+/* Narrow screen: collapse sidebar */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr; /* only main content visible */
+  }
+
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    transform: translateX(-100%); /* hidden by default */
+    z-index: 10;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  aside.is-open {
+    transform: translateX(0); /* slide in when open */
+  }
+
+  /* Show toggle button */
+  .sidebar-toggle {
+    display: inline-block;
+  }
 }

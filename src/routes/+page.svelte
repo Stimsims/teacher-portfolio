@@ -14,6 +14,7 @@
 
    import { examples } from '$lib/+Data/test-md-paths.js';
   import { examples as math_posts } from '$lib/+Data/math_posts.js';
+  import { examples as ai_certificate_posts } from '$lib/+Data/ai_certificates_posts.js';
 
   //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
@@ -121,6 +122,8 @@
     <section id="about" class="page">
         <h2>About Me</h2>
         <p>Games for fluency, self-assessment for growth, celebrating mistakes, connecting with funds of knowledge</p>
+        <h4>Artificial Intelligence as a Useful Tool for the Cautious Educator</h4>
+        <MarkdownList examples={ai_certificate_posts}/>
     </section>
     <section id="professional_development" class="page">
         <h2>Here are some course badges I've completed</h2>

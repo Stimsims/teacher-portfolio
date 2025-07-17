@@ -1,0 +1,19 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import cyber_security from './../../../assets/images/certificates/cyber-security.png?enhanced&w=300;600;1200;2000&format=webp';
+  import generative_ai_for_education from './../../../assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import teaching_ai_primary from './../../../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
+</script>
+
+# Short Courses in AI for Education 
+
+Like many, I'm intrigued by the possibilities artificial intelligence offers to many fields. 
+I suspect education will be the field that benefits most from AI - a field where AI isn't asked to invent, but to transform well known curriculum content into personalised formats that suit a students interests and learning styles.
+
+<ImageCollage images={[generative_ai_for_education, teaching_ai_primary]}  />
+
+
+#### Cyber Security for AI in Primary Years
+While AI presents exciting new possibilities, the risks to privacy and security of bringing an intelligent tool owned by private interests into the classroom must be considered with every application. 
+This course refined my understanding of the value and need to secure students personally identifiable data. 
+<ImageCollage images={[cyber_security]}  />

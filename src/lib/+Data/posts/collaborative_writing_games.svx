@@ -1,0 +1,24 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import writing_example from './../../../assets/images/literacy/pair writing example.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_1 from './../../../assets/images/literacy/pair writing 1.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_2 from './../../../assets/images/literacy/pair writing 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_3 from './../../../assets/images/literacy/pair writing 3.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import feedback from './../../../assets/images/literacy/paired writing feedback.png?enhanced&w=300;600;1200;2000&format=webp';
+</script>
+
+# Collaborative Writing Games
+
+For beginning writers, games that make their writing useful can trigger meaningful writing sessions the student is proud of and wants to share with friends.
+
+
+The Example
+<ImageCollage images={[writing_example]}  />
+
+The Student Work
+<ImageCollage images={[work_1, work_2, work_3]}  />
+
+The AI Feedback
+<ImageCollage images={[feedback]}  />
+
+

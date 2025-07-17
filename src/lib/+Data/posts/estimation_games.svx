@@ -1,0 +1,12 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import estimate_60cm from './../../../assets/images/math/estimate_60cm.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import measure_numberline from './../../../assets/images/math/numberline_armstrength.png?enhanced&w=300;600;1200;2000&format=webp';
+</script>
+
+# Easy Estimation Warm Ups
+
+Asking students to predict a math answer and explain how they got there is a great for focusing attention on skills in a relaxed way.
+
+<ImageCollage images={[estimate_60cm, measure_numberline]}  />
+
