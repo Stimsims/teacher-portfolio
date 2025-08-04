@@ -10,6 +10,8 @@
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Me' },
     { id: 'math', label: 'Math' },
+    { id: 'literacy', label: 'Literacy' },
+    { id: 'technology', label: 'Technology' },
     { id: 'footer', label: 'Footer' }
   ];
 

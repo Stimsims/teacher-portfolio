@@ -12,10 +12,10 @@
   import PieChart from '$lib/Charts/Pie.svelte';
   import LineChart from '$lib/Charts/Line.svelte';
 
-   import { examples } from '$lib/+Data/test-md-paths.js';
   import { examples as math_posts } from '$lib/+Data/math_posts.js';
   import { examples as ai_certificate_posts } from '$lib/+Data/ai_certificates_posts.js';
-
+  import { examples as product_posts } from '$lib/+Data/product_posts.js';
+  import { examples as literacy_posts } from '$lib/+Data/literacy_posts.js';
   //import BarChart from '$lib/Charts/Bar.svelte'
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -73,16 +73,19 @@
     <section id="math" class="page">
         <h2>Math</h2><p>Here's how I teach mathematics...</p>
         <MarkdownList examples={math_posts}/>
-        <!-- <DataList examples={math_posts} on:select={(e) => selected = e.detail} /> -->
-        {#if selected}
-            <Modal onClose={() => (selected = null)}>
-                <DocumentationView example={selected} />
-            </Modal>
-        {/if}
+    </section>
+    <section id="literacy" class="page">
+        <h2>Literacy</h2><p>Here's how I teach literacy...</p>
+        <MarkdownList examples={literacy_posts}/>
     </section>
     <section id="technology" class="page">
         <h2>Technology</h2><p>With a background in programming, web development and AI product development...</p>
     </section>
     <section id="footer" class="page"><h2>Contact</h2><p>Get in touch: email@example.com</p></section>
+      {#if selected}
+          <Modal onClose={() => (selected = null)}>
+              <DocumentationView example={selected} />
+          </Modal>
+      {/if}
   </main>
 </div>

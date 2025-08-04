@@ -1,0 +1,27 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import cyber_security from './../../../assets/images/certificates/cyber-security.png?enhanced&w=300;600;1200;2000&format=webp';
+  import generative_ai_for_education from './../../../assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import teaching_ai_primary from './../../../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
+</script>
+
+# Short Courses in AI for Education 
+
+Like many, I'm intrigued by the possibilities artificial intelligence offers to many fields. 
+I suspect education will be the field that benefits most from AI - a field where AI isn't asked to invent, but to transform well known curriculum content into personalised formats that suit a students interests and learning styles.
+
+<ImageCollage images={[generative_ai_for_education, teaching_ai_primary]}  />
+
+
+#### Cyber Security for AI in Primary Years
+While AI presents exciting new possibilities, the risks to privacy and security of bringing an intelligent tool owned by private interests into the classroom must be considered with every application. 
+This course refined my understanding of the value and need to secure students personally identifiable data. 
+<ImageCollage images={[cyber_security]}  />
+
+As I explored short courses in AI for education, I became increasingly convinced that this technology has the potential to revolutionize our teaching methods. What excites me most is its ability to help us tailor existing curriculum content to individual students' interests and learning styles.
+
+However, with great power comes significant responsibility. As educators, we must carefully consider the implications of introducing language pattern tools into the classroom. We discussed how to balance the benefits of AI with the need to safeguard sensitive information. This conversation helped me realize that true innovation in education requires not only technical expertise but also a commitment to ethical decision-making.
+
+While there's still much to learn, I'm heartened by the progress we've made so far. As educators, it's essential that we prioritize transparency, accountability, and student well-being when exploring new technologies like AI. By doing so, we can harness its potential to enhance learning experiences while minimizing its risks.
+
+In the future, I'd like to revisit this topic and explore ways to integrate AI-powered tools in a way that prioritizes student safety and autonomy. 

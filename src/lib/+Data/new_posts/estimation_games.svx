@@ -6,11 +6,20 @@
 
 # Easy Estimation Warm Ups
 
+Asking students to predict a math answer and explain how they got there is a great for focusing attention on skills in a relaxed way.
+- following social constructivist principles, using vocabulary to articulate thinking enhances learning
+
+<ImageCollage images={[estimate_60cm, measure_numberline]}  />
+
+- estimation is a low barrier to entry that can get even the most nervous math students to have a try
+	example activity: draw a line on the board to estimate how long 60cm is when learning about formal measurements.
+	example activity: build a numberline together of estimated measurements of items of a similar length
+	
+	
+	
 In my experience, one of the most effective ways to refocus students' attention on mathematical concepts is by incorporating low-stakes, engaging warm-ups into our lessons. For me, "Easy Estimation Warm Ups" has proven to be a game-changer in creating a supportive learning environment.
 
 By leveraging social constructivist principles and encouraging vocabulary development, these warm-ups not only help build students' confidence but also lay the groundwork for more in-depth mathematical explorations. The beauty of estimation lies in its accessibility – it's an approach that can even the most apprehensive math students into participating.
-
-<ImageCollage images={[estimate_60cm, measure_numberline]}  />
 
 One of my favorite examples of this is using a simple drawing activity on the board. For instance, when we're learning about formal measurements, I'll draw a line to estimate how long 60cm is. This exercise not only gets students thinking creatively but also helps them develop their ability to articulate their thought process – a crucial aspect of mathematical problem-solving.
 

@@ -1,0 +1,22 @@
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+  import pair1 from './../../../assets/images/literacy/pair writing 1.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import pair2 from './../../../assets/images/literacy/pair writing 2.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import pair3 from './../../../assets/images/literacy/pair writing 3.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import writing_challenge from './../../../assets/images/literacy/pair writing example.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import writing_feedback from './../../../assets/images/literacy/paired writing feedback.png?enhanced&w=300;600;900;1200;2000&format=webp';
+</script>
+
+# Writing Games
+Some of the most rewarding moments in teaching come when a student who usually avoids a subject starts to lean in — even enjoy it. This was the case in a very social classroom where independent writing tasks often led to distraction or disengagement. Instead of pushing back against that energy, I redesigned some writing activities to work in pairs, using open-ended sentence starters like:
+#### "We didn't get along at first, but..."
+
+<ImageCollage images={[writing_challenge]}  />
+
+The structure gave students a social entry point into creative writing, and opened space for imaginative collaboration — including a story about a narwhal named Rosurey that still makes me smile.
+<ImageCollage images={[pair1, pair2, pair3]}  />
+
+At the same time, I wanted to ensure students were getting meaningful, individualised feedback on their writing. Referencing Hattie’s (2009) findings about the impact of quality assessment, I experimented with a low-tech solution to a high-pressure reality: time. I photographed anonymised student work and used AI tools to generate feedback tailored to each piece. This allowed me to offer more specific guidance than would otherwise be possible during a busy week.
+<ImageCollage images={[writing_feedback]}  />
+
+What stood out most was how students who previously struggled with writing — including those still working on basic phonemes — became more willing to take risks. The combination of a socially responsive structure and timely feedback helped them see writing as something within reach. These small shifts, while modest, felt deeply meaningful — and reminded me that sometimes the best way to support students is to meet them where they are, then gently open the door.

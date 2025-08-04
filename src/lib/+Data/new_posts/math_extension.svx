@@ -8,14 +8,22 @@
 
 # Extension Challenges
 
-As I reflect on my teaching practice, I'm reminded of the importance of creating an inclusive and challenging learning environment for all students. One approach I've found effective is designing extension activities that cater to multiple skill levels, while also fostering productive struggle.
-
-My goal is not just to review basic concepts, but to push students beyond their comfort zones and encourage them to think critically about mathematical concepts. By incorporating extension questions with high ceilings, I provide opportunities for students to engage in meaningful discussions about math that are relevant to their lives.
+When working with students, to ensure all students the lesson is in their proximal zone of development, I design activities for multiple skill levels, with extension questions with a 'high ceiling'. The initial simple questions serve as a review, while the gradual increase to more cognitively complex variations of the lesson question give all students the opportunity for productive struggle (Boaler, 2022). I listen to my students, paying attention to their interests and funds of knowledge, so that I can contextualize mathematics in contexts of personal relevance, to support more enthusiastic discussions about math (Van de Walle et al, 2019). The use of mathematical language in social contexts is the anvil where lessons become meaningful, according to social constructivists like Vygotsky (Dimitriadis and Kamberelis, 2006). 
 
 #### Examples of class extension activities
 - addition unit - ordering from a menu. Students selected preferred food or toys from menus and added the prices together to get the total. Students started with two, but could choose to add more when ready.
 <ImageCollage images={[restaurant_addition]}  />
 
+- statistics unit - students were asked to create simple survey questions that would generate interesting data to graph. The key learning took place when asking how to graph different information and why some questions were more difficult to display on a graph than others.
+- measurement unit - devising sports tests to measure strength or strength. The discussion about fairness and accuracy proved to be passionate and excellent mediums for developing students understanding of units of measurement, reliability and validity.
+
+- any unit - at the simplest levels, rewarding students for challenging themselves proved an excellent way to have students think about what 'harder' meant in mathematics.
+<ImageCollage images={[img1, img2,  img4]}  />
+
+
+As I reflect on my teaching practice, I'm reminded of the importance of creating an inclusive and challenging learning environment for all students. One approach I've found effective is designing extension activities that cater to multiple skill levels, while also fostering productive struggle.
+
+My goal is not just to review basic concepts, but to push students beyond their comfort zones and encourage them to think critically about mathematical concepts. By incorporating extension questions with high ceilings, I provide opportunities for students to engage in meaningful discussions about math that are relevant to their lives.
 
 One key insight I've gained from my practice is the value of listening to students and understanding their interests and funds of knowledge. By contextualizing mathematics within real-world contexts, I can tap into students' existing knowledge and enthusiasm, making lessons more engaging and effective.
 
@@ -25,11 +33,8 @@ In my classroom, I've found that extension activities can be designed to meet di
 
 In an addition unit, students enjoyed ordering food from a menu, where they had to calculate totals and make choices within their budget.
 During a statistics unit, students created simple survey questions to generate interesting data for graphing, which helped them understand the importance of question design.
-
 In a measurement unit, students developed sports tests to measure strength, leading to lively discussions about fairness and accuracy.
 While there have been moments of triumph and insight, I also recognize areas where I could improve. For instance, rewarding students for challenging themselves can be a double-edged sword – it's essential to strike the right balance between encouragement and guidance.
-
-<ImageCollage images={[img1, img2,  img4]}  />
 
 As I continue to refine my practice, I'm committed to creating learning experiences that are both challenging and accessible to all students. By listening to students, contextualizing math within real-world contexts, and designing extension activities with high ceilings, I aim to create a supportive environment where students can grow and thrive.
 
