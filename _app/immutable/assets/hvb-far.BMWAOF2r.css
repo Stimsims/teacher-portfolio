@@ -1,0 +1,1 @@
+.collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.5rem;max-width:100%;margin:auto}.collage-item{width:100%}.collage-item picture,.collage-item img,.collage-item enhanced\:img,.collage-item enhanced\:img img{width:100%;height:auto;display:block;object-fit:cover;border-radius:.5rem;box-shadow:0 2px 6px #00000026}
