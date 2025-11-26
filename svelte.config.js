@@ -17,7 +17,7 @@ const config = {
 			strict: false        // ← allow non-prerenderable routes
 		}),
 		paths: {
-			base: dev ? '' : '/teacher-portfolio'
+			base: ''//netlify doesn't need this -> dev ? '' : '/teacher-portfolio'
 		},
 		prerender: {
 			entries: ['*']       // pre-render whenever possible
