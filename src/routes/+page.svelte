@@ -12,6 +12,7 @@
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';
   import LineChart from '$lib/Charts/Line.svelte';
+  import Header from '$lib/Header/Header.svelte';
 
   import { examples as math_posts } from '$lib/+Data/math_posts.js';
   import { examples as ai_certificate_posts } from '$lib/+Data/ai_certificates_posts.js';
@@ -25,7 +26,10 @@
   import cert_teaching_ai_primary from './../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_solar_language from './../assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
 import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
-
+import img_map from './../../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_tafe from './../../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_house from './../../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_idioms from './../../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -91,9 +95,26 @@ import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;90
     </section>
     <section id="work_experience" class="page">
         <h2>Work and Volunteering Experience</h2>
+      <h3 class="margin-vertical-large">TAFE AMEP Volunteering</h3>
+      <Header img={img_tafe} alt="The Tafe building in Morwell, Victoria" class="margin-vertical-large"  >
+        <p>In 2025 I volunteered in the <a href="https://immi.homeaffairs.gov.au/settling-in-australia/amep/overview">Australian Migrant English Program (AMEP)</a> at TAFE in Morwell, Victoria.</p>
+        <p>Through this program I worked with a wide range of new arrivals to Australia. This volunteer role required creativity in communicating complex ideas like English idioms to students. </p>
+        <p>Importantly, sensitivity to students often difficult circumstances was critically important to creating a positive learning space.</p>
+      </Header>
+      <div class="margin-vertical-large">
+        <ImageCollage images={[img_activity_house, img_activity_idioms]} class="margin-vertical-small" />
+        <h4 class="text-center">Creative and Quality English Lessons</h4>
         <ul>
-          <li><a href="/tafeAMEPvolunteering">TAFE Adult Migrant English Program (AMEP) Volunteering</a></li>
+          <li> <p class="text-left">Working with <a href="https://immi.homeaffairs.gov.au/settling-in-australia/amep/resources">government resources to support all learners</a>, no matter what prior knowledge or experiences they have is a pertinent skill in the modern, multicultural classroom.</p></li>
+          <li> <p class="text-left">The teachers delivering these programs were pioneers in English education. It was a privilege to work with passioante teachers who innovated creative ways to make English useful and enjoyable for their students. </p></li>
         </ul>
+      </div>
+      <Header img={selfie} alt="A selfie of pre-service teacher student" class="margin-vertical-large" >
+        <div>
+          <h4>Teaching English to Beginners</h4>
+        <p>Through this wonderful volunteering opportunity in which I worked with creative and passionate teachers, and warm and patient students, I gained experience in connecting English with a wide variety of cultures and backgrounds.</p>
+        </div>
+      </Header>
     </section>
     <section id="professional_development" class="page">
         <h2>Professional Development</h2>
