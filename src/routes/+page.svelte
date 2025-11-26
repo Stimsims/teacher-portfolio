@@ -57,7 +57,7 @@ import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;
     <section id="home" class="page">
           <div class="responsive-row-equal ">
             <div class="max-width-small" >
-              <h2>Welcome to my teacher portfolio</h2>
+              <h2>Welcome to my teacher portfolio (Work in Progress)</h2>
               <p>I am currently completing my primary teaching degree at Deakin University</p>
               <h4>Degree Progress:</h4>
               <ul>
