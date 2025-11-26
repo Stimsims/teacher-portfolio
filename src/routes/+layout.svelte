@@ -1,9 +1,11 @@
 <script>
+  // That tells SvelteKit: “Treat all my pages as static and prerender them.”
+  export const prerender = true;
   import "@picocss/pico/css/pico.min.css";
   import "@picocss/pico/css/pico.colors.min.css"; 
   import '../app.css';
   import '../text.css';
-  import '../grid.css';
+  import '../grid.css';``
   import '../lib/animations.css';  /* ✅ Correct shared animation path */
 
   let isSidebarOpen = false;
