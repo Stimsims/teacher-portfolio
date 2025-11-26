@@ -1,0 +1,143 @@
+
+/* These vars come from pico.colors.min.css */
+h1 { 
+  color: var(--pico-color-purple-700); 
+}
+h2 { 
+  color: var(--pico-color-purple-600); 
+  text-decoration: underline;
+}
+h3 { color: var(--pico-color-purple-500); }
+h4 { color: var(--pico-color-purple-400); }
+h5 { color: var(--pico-color-purple-350); }
+h6 { color: var(--pico-color-purple-300); }
+
+/* make links inside headings match */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+
+a {
+  font-family: var(--font-body);
+}
+
+/* Headers use Playfair for contrast */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+/* ✅ Override: links inside headers inherit header font */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-family: var(--font-header);
+}
+
+/* Respect Light mode tweaks */
+/* @media (prefers-color-scheme: light) { */
+  body, .background {
+    background: #fff;
+    color: #222;
+  }
+
+  .opal-text {
+    background: linear-gradient(
+      80deg,
+      #0f0c29,
+      #131191,
+      #7f5af0,
+      #1a9988,
+      #0f0c29,
+      #c71737
+    );
+  }
+
+  /* Underline */
+  a.opal-text::after {
+    background: linear-gradient(
+      80deg,
+      #0f0c29,
+      #131191,
+      #7f5af0,
+      #1a9988,
+      #0f0c29,
+      #c71737
+    );
+  }
+
+
+
+.opal-text {
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+a.opal-text {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  z-index: 0; /* ensure it's above the underline */
+}
+
+/* Underline */
+a.opal-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.1em; /* shift lower */
+  height: 2px;
+  width: 100%;
+  background-size: 80%;
+  background-position: 0% 50%;
+  border-radius: 9999px;
+  transform: scaleX(0.6);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform-origin: center;
+  z-index: -1; /* put it under the text */
+}
+a.opal-text:hover::after,
+a.opal-text:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffcbf2, #a3c4f3, #d0f4de, #ffd6a5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.gradient-text:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.pastel-glow {
+  color: rgb(41, 4, 41); /* or inherit */
+  text-shadow:
+    0 0 10px #d672bd,
+    0 0 18px #3b6bae;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}

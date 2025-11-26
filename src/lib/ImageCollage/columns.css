@@ -1,0 +1,25 @@
+.multi-columns {
+  display: flex;
+  gap: 1rem; /* Adjust spacing between columns */
+}
+
+
+.multi-columns > div {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background-color: var(--background-primary-alt);
+  box-shadow: var(--shadow-s);
+}
+
+/* <div class="multi-columns">
+  <div>
+    ## Column 1
+    This can be your **problem** section.
+  </div>
+  <div>
+    ## Column 2
+    This can be your **solution** section.
+  </div>
+</div> */

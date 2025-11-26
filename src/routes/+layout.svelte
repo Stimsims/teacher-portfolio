@@ -1,7 +1,10 @@
 <script>
-  import '../app.css';
-  import '../lib/animations.css';  /* ✅ Correct shared animation path */
   import "@picocss/pico/css/pico.min.css";
+  import "@picocss/pico/css/pico.colors.min.css"; 
+  import '../app.css';
+  import '../text.css';
+  import '../grid.css';
+  import '../lib/animations.css';  /* ✅ Correct shared animation path */
 
   let isSidebarOpen = false;
   let currentSection = 'home';
@@ -9,10 +12,14 @@
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Me' },
+    { id: 'engagement', label: 'Engagement' },
+    { id: 'classroom_management', label: 'Classroom Management' },
+    { id: 'lesson_planning', label: 'Lesson Planning' },
+    { id: 'behaviour_management', label: 'Behaviour Management' },
     { id: 'math', label: 'Math' },
+    { id: 'math_differentiation', label: 'Math Differentiation' },
     { id: 'literacy', label: 'Literacy' },
-    { id: 'technology', label: 'Technology' },
-    { id: 'footer', label: 'Footer' }
+    { id: 'contact', label: 'Contact' }
   ];
 
   function toggleSidebar() {
@@ -71,15 +78,21 @@
 </div>
 
 <style>
-  .layout {
-    display: flex;
+
+  /* Allow children to shrink below their content width (fixes snapping at ~575px) */
+  .layout,
+  main,
+  aside {
+    min-width: 0;
   }
+
+
 
   aside {
     width: 200px;
     background: var(--pico-muted-border-color);
     transition: transform 0.3s ease;
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 100vh;
     display: flex;
@@ -124,6 +137,11 @@
       height: 100vh;
       transform: translateX(-100%);
       z-index: 1000;
+    }
+
+    /* more compact padding on very small screens */
+    main {
+      padding: 1rem;
     }
 
     aside.is-open {
