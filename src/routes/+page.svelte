@@ -3,6 +3,7 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
+  import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
   import Modal from '$lib/Modal/Modal.svelte';
   import DataList from '$lib/DataList/DataList.svelte'
@@ -33,17 +34,6 @@ import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;90
 
 
 <style>
-
-
-
-  main {
-    padding: 2rem;
- 
-  }
-  section {
-    padding: 100px 0;
-    border-bottom: 1px solid var(--pico-muted-border-color);
-  }
 
   .home-hero {
     width: 100%;
@@ -98,6 +88,12 @@ import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;90
           </div>
       </div>
       <MarkdownList examples={ai_certificate_posts}/>
+    </section>
+    <section id="work_experience" class="page">
+        <h2>Work and Volunteering Experience</h2>
+        <ul>
+          <li><a href="/tafeAMEPvolunteering">TAFE Adult Migrant English Program (AMEP) Volunteering</a></li>
+        </ul>
     </section>
     <section id="professional_development" class="page">
         <h2>Professional Development</h2>
