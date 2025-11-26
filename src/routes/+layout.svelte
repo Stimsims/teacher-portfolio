@@ -14,6 +14,8 @@
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Me' },
+    { id: 'work_experience', label: 'Work Experience' },
+    { id: 'professional_development', label: 'Professional Development' },
     { id: 'engagement', label: 'Engagement' },
     { id: 'classroom_management', label: 'Classroom Management' },
     { id: 'lesson_planning', label: 'Lesson Planning' },

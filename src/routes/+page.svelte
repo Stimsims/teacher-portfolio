@@ -26,10 +26,10 @@
   import cert_teaching_ai_primary from './../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_solar_language from './../assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
 import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
-import img_map from './../../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_tafe from './../../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_house from './../../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_idioms from './../../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_tafe from './../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_house from './../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_idioms from './../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -95,7 +95,7 @@ import img_map from './../../assets/images/tafeAMEP/morwell_map.png?enhanced&w=3
     </section>
     <section id="work_experience" class="page">
         <h2>Work and Volunteering Experience</h2>
-      <h3 class="margin-vertical-large">TAFE AMEP Volunteering</h3>
+      <h3 id="tafe_amep_volunteering" class="margin-vertical-large">TAFE AMEP Volunteering</h3>
       <Header img={img_tafe} alt="The Tafe building in Morwell, Victoria" class="margin-vertical-large"  >
         <p>In 2025 I volunteered in the <a href="https://immi.homeaffairs.gov.au/settling-in-australia/amep/overview">Australian Migrant English Program (AMEP)</a> at TAFE in Morwell, Victoria.</p>
         <p>Through this program I worked with a wide range of new arrivals to Australia. This volunteer role required creativity in communicating complex ideas like English idioms to students. </p>
