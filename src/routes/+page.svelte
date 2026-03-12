@@ -13,6 +13,7 @@
   import PieChart from '$lib/Charts/Pie.svelte';
   import LineChart from '$lib/Charts/Line.svelte';
   import Header from '$lib/Header/Header.svelte';
+  import TagList from '$lib/TagList/TagList.svelte';
 
   import { examples as math_posts } from '$lib/+Data/math_posts.js';
   import { examples as ai_certificate_posts } from '$lib/+Data/ai_certificates_posts.js';
@@ -55,6 +56,7 @@ import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;
 
   <main>
     <section id="home" class="page">
+          <TagList tags={["math", "literacy", "engagement", "behaviour_management", "classroom_management", "lesson_planning", "technology"]} />
           <div class="responsive-row-equal ">
             <div class="max-width-small" >
               <h2>Welcome to my teacher portfolio (Work in Progress)</h2>
