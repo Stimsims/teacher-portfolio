@@ -1,6 +1,6 @@
 ---
-title: "Math Extension Challenges"
-summary: "Following cognitive load theory, math skills start simple..."
+title: "post title"
+summary: "post summary"
 tags: ["math", "extension", "real-world"]
 ---
 

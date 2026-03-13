@@ -1,6 +1,6 @@
 <!-- src/lib/components/TagList.svelte -->
 <script>
-  export let tags = ["hello", "world"];
+  export let tags;
 
   function goToTag(tag) {
     window.location.href = `/tag/${tag}`;

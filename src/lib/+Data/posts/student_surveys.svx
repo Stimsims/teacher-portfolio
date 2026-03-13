@@ -1,3 +1,10 @@
+---
+title: "post title"
+summary: "post summary"
+tags: ["math", "extension", "real-world"]
+---
+
+
 <script>
   import PieChart from '$lib/Charts/Pie.svelte';
 

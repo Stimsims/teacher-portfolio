@@ -1,3 +1,8 @@
+---
+title: "post title"
+summary: "post summary"
+tags: ["math", "extension", "real-world"]
+---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
   import pair1 from './../../../assets/images/literacy/pair writing 1.jpeg?enhanced&w=300;600;1200;2000&format=webp';

@@ -1,4 +1,8 @@
-
+---
+title: "post title"
+summary: "post summary"
+tags: ["math", "extension", "real-world"]
+---
 
 
 ## Example of starting with bigger questions like will the answer be less than/more than, why?
