@@ -1,7 +1,7 @@
 ---
-title: "post title"
-summary: "post summary"
-tags: ["math", "extension", "real-world"]
+title: 'Easy Estimation Warm Ups'
+summary: "Quick estimation games are great for review, while allowing students to reason about math in a low stakes game."
+tags: ["math", "estimation"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';

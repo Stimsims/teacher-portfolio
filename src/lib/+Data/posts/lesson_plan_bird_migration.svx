@@ -1,7 +1,7 @@
 ---
-title: "post title"
-summary: "post summary"
-tags: ["math", "extension", "real-world"]
+title: 'Cross-curricular Lesson Plan - Math and Biology'
+summary: "Maths is a language, it's strengths are best understood when studying the natural world. A game of 'migration' tag sharpened kids data gathering and display skills, while keeping them excited and active."
+tags: ["math", "HPE", "real-world"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
