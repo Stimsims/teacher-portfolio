@@ -1,6 +1,9 @@
 <script>
   // That tells SvelteKit: “Treat all my pages as static and prerender them.”
+  
   export const prerender = true;
+  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
   import '../app.css';
   import '../text.css';
   import '../grid.css';``
@@ -8,7 +11,12 @@
 
   let isSidebarOpen = false;
   let currentSection = 'home';
+  let currentPath = '/'; // local variable to hold the current path
 
+  // ✅ Subscribe to the `page` store (Svelte 5 way)
+  page.subscribe(($page) => {
+    currentPath = $page.url.pathname;
+  });
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Me' },
@@ -37,13 +45,21 @@
     }
   };
 
+  // ✅ Scroll if on root, else navigate
   function scrollToSection(id) {
-    const sectionEl = document.getElementById(id);
-    if (sectionEl) {
-      sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      isSidebarOpen = false;
+    if (currentPath === '/') {
+      // Already on homepage → smooth scroll
+      const sectionEl = document.getElementById(id);
+      if (sectionEl) {
+        sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        isSidebarOpen = false;
+      }
+    } else {
+      // In a subdirectory → navigate to root with hash
+      goto(`/#${id}`, { replaceState: false });
     }
   }
+
 </script>
 
 <svelte:window on:scroll={handleScroll} />
