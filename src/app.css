@@ -7,15 +7,15 @@
   --pico-secondary-background: #c9c9c9;
 
   /* Text color */
-  --pico-color: red;
+  --pico-color: rgb(30, 30, 30)a(255, 255, 255, 0.3);
 
   /* Borders and muted elements */
   --pico-muted-border-color: rgba(255, 255, 255, 0.3);
 
   /* Primary colors */
-  --pico-primary: red;
+  --pico-primary: rgba(110, 49, 217, 0.8);
   --pico-primary-hover: #8b5cf6;
-  --pico-primary-focus: rgba(124, 58, 237, 0.4);
+  --pico-primary-focus: rgba(110, 49, 217, 1.0);
 }
 /* [data-theme=light] {
   --pico-background-color: yellow;

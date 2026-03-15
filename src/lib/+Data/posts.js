@@ -13,3 +13,23 @@ export const posts = Object.entries(
 export function getPostsByTag(posts, tag) {
   return posts.filter((post) => post.tags?.includes(tag));
 }
+
+export function countPostsByTag(posts) {
+    let tagCounts = {};
+    const flattenedTagCount = []
+    console.log('Counting tags')
+    posts.forEach(post => {
+        if (post.tags) {
+            post.tags.forEach(tag => {
+                console.log(`Counting tag: ${tag} for post: ${post.title}`);
+                tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+            });
+        }
+    });
+    console.log('Tag counts:', tagCounts);
+    for (let tag in tagCounts) {
+        flattenedTagCount.push({x: tag, y: tagCounts[tag]})
+    }
+    console.log('Flattened tag count:', flattenedTagCount);
+    return flattenedTagCount;
+}

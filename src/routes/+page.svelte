@@ -3,7 +3,7 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
-  export let {math_posts, ai_certificate_posts, literacy_posts} = data;
+  export let {math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
 
   import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
@@ -14,8 +14,10 @@
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';
   import LineChart from '$lib/Charts/Line.svelte';
+  import BarChart from '$lib/Charts/Bar.svelte';
   import Header from '$lib/Header/Header.svelte';
   import TagList from '$lib/TagList/TagList.svelte';
+
 
   import cert_protecting_children from './../assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_cyber_security from './../assets/images/certificates/cyber-security.png?enhanced&w=300;600;900;1200;2000&format=webp';
@@ -23,15 +25,20 @@
   import cert_google_ai from './../assets/images/certificates/google_ai_educators.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_teaching_ai_primary from './../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_solar_language from './../assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
-import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
-import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
+  import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import img_tafe from './../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
   import img_activity_house from './../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
   import img_activity_idioms from './../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
-  
+  function handleChartClick(event) {
+    const { series, x, y } = event;
+    console.log('Parent received click:', { series, x, y });
+    // Handle your logic here
+    window.location.href = `/tag/${x}`;
+  }
 </script>
 
 
@@ -67,6 +74,9 @@ import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;
             <div class="max-width-small">
               <enhanced:img src={selfie} alt="A picture of student teacher hvb" class="home-hero" />
             </div>
+          </div>
+          <div style="width:100%">
+            <BarChart title="my bar chart" series={[{name:'tag counts', data: tag_count}]} onClick={handleChartClick} />
           </div>
     </section>
     <section id="about" class="page">
