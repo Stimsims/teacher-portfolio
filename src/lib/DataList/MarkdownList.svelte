@@ -6,31 +6,12 @@
   // Provided from parent
   export let examples;
 
-  let filledExamples = [];
+  //let filledExamples = [];
   let markdownComponent = null;
   let currentExample = null;
 
-  // Load all example details asynchronously
-  async function loadExamples() {
-    filledExamples = await Promise.all(
-      examples.map(async (example) => {
-        const module = await example.details();
-        console.log('Loaded long awaited module for example:', module);
-        return {
-          ...example,
-          component: module.default,
-          metadata: module.metadata // frontmatter from .svx
-        };
-      })
-    );
-
-    console.log('Loaded examples:', filledExamples);
-    console.log('First metadata:', filledExamples[0].metadata);
-  }
-
-  onMount(loadExamples);
-
   function openModal(example) {
+    console.log(`Opening modal for example: ${example.title}`);
     markdownComponent = example.component;
     currentExample = example;
   }
@@ -42,15 +23,15 @@
 </script>
 
 <section class="example-list">
-  {#each filledExamples as example}
+  {#each examples as example}
     <div class="example-card">
       <h2>
         <a class="opal-text" on:click={() => openModal(example)}>
-          {example.metadata?.title || "loading"}
+          {example.title || "loading"}
         </a>
       </h2>
-      <TagList tags={example.metadata?.tags || []} />
-      <p>{example.metadata?.summary || "loading summary"}</p>
+      <TagList tags={example.tags || []} />
+      <p>{example.summary || "loading summary"}</p>
     </div>
   {/each}
 </section>

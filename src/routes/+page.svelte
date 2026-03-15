@@ -3,6 +3,8 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
+  export let {math_posts, ai_certificate_posts, literacy_posts} = data;
+
   import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
   import Modal from '$lib/Modal/Modal.svelte';
@@ -14,11 +16,6 @@
   import LineChart from '$lib/Charts/Line.svelte';
   import Header from '$lib/Header/Header.svelte';
   import TagList from '$lib/TagList/TagList.svelte';
-
-  import { examples as math_posts } from '$lib/+Data/math_posts.js';
-  import { examples as ai_certificate_posts } from '$lib/+Data/ai_certificates_posts.js';
-  import { examples as product_posts } from '$lib/+Data/product_posts.js';
-  import { examples as literacy_posts } from '$lib/+Data/literacy_posts.js';
 
   import cert_protecting_children from './../assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_cyber_security from './../assets/images/certificates/cyber-security.png?enhanced&w=300;600;900;1200;2000&format=webp';

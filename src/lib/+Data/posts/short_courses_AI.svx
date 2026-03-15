@@ -1,7 +1,7 @@
 ---
-title: "post title"
+title: "AI Short Courses Certificates"
 summary: "post summary"
-tags: ["math", "extension", "real-world"]
+tags: ["certificate"]
 ---
 
 <script>

@@ -1,7 +1,7 @@
 ---
-title: "post title"
-summary: "post summary"
-tags: ["math", "extension", "real-world"]
+title: "Collaborative Writing Game"
+summary: "Collaborative writing game summary"
+tags: ["writing", "collaboration"]
 ---
 
 <script>

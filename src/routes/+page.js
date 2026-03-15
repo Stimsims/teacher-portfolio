@@ -1,12 +1,13 @@
-import examples from '$lib/+Data/test.json';
 
-// +page.js or +layout.js
+import { posts, getPostsByTag } from '$lib/+Data/posts.js';
+// +page.js or +limport { posts, getPostsByTag } from '$lib/+Data/posts.js';ayout.js
 export const prerender = true;
 
 
 export function load() {
-  console.log("✅ load() called, loading example data");
   return {
-    examples
+    math_posts: getPostsByTag(posts, "math"), 
+    ai_certificate_posts: getPostsByTag(posts, "certificate"),
+    literacy_posts: getPostsByTag(posts, "literacy")
   };
 }

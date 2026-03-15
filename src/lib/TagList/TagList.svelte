@@ -9,7 +9,7 @@
 
 <ul class="tags">
   {#each tags as tag}
-    <li class="tag" on:click={() => goToTag(tag)}>
+    <li class="tag opal-text" on:click={() => goToTag(tag)}>
       {tag}
     </li>
   {/each}
@@ -22,14 +22,15 @@
   }
   .tag {
     display: inline-block;
-    margin: 0 8px 8px 0;
-    padding: 5px 10px;
-    background: #f0f0f0;
+    margin: 0px 0px;
+    padding: 0px 5px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    text-decoration: underline;
   }
   .tag:hover {
-    background: #ddd;
+    opacity: 1;
   }
 </style>

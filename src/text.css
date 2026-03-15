@@ -1,13 +1,15 @@
 
+
+
 /* These vars come from pico.colors.min.css */
 h1 { 
-  color: var(--pico-color-purple-700); 
+  color: var(--pico-primary); 
 }
 h2 { 
-  color: var(--pico-color-purple-600); 
+  color: var(--pico-primary); 
   text-decoration: underline;
 }
-h3 { color: var(--pico-color-purple-500); }
+h3 { color: var(--pico-color-violet-500); }
 h4 { color: var(--pico-color-purple-400); }
 h5 { color: var(--pico-color-purple-350); }
 h6 { color: var(--pico-color-purple-300); }
@@ -36,13 +38,6 @@ h5 a,
 h6 a {
   font-family: var(--font-header);
 }
-
-/* Respect Light mode tweaks */
-/* @media (prefers-color-scheme: light) { */
-  body, .background {
-    background: #fff;
-    color: #222;
-  }
 
   .opal-text {
     background: linear-gradient(

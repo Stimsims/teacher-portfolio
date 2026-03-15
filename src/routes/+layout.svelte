@@ -1,8 +1,6 @@
 <script>
   // That tells SvelteKit: “Treat all my pages as static and prerender them.”
   export const prerender = true;
-  import "@picocss/pico/css/pico.min.css";
-  import "@picocss/pico/css/pico.colors.min.css"; 
   import '../app.css';
   import '../text.css';
   import '../grid.css';``
@@ -49,8 +47,8 @@
 </script>
 
 <svelte:window on:scroll={handleScroll} />
-
-<div class="layout">
+ 
+<div class="layout" data-theme="light" >
   <!-- Sidebar -->
   <aside class:is-open={isSidebarOpen}>
     <nav class="sidebar">
@@ -71,10 +69,10 @@
   </aside>
 
   <!-- Main content -->
-  <main>
+  <main >
     <!-- Mobile toggle with reusable fade-in animation -->
     <button class="sidebar-toggle fade-in" on:click={toggleSidebar}>
-      {isSidebarOpen ? "✖" : "☰"}
+      {isSidebarOpen ? "X" : "☰"}
     </button>
 
     <slot />
@@ -89,21 +87,40 @@
   aside {
     min-width: 0;
   }
+  .layout {
+    min-height: 100vh;
+  }
 
+  main {
+    margin-left:200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    flex: 1;
+    padding: 2rem;
+  }
 
 
   aside {
-    width: 200px;
-    background: var(--pico-muted-border-color);
+    background: var(--pico-secondary-background);
+    padding-left: 1rem;
     transition: transform 0.3s ease;
+    width: 200px;
     position: fixed;
     top: 0;
+    left: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    z-index: 1000;
   }
 
+  nav.sidebar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
   nav.sidebar ul {
     display: block;
     padding: 0;
@@ -123,39 +140,59 @@
     transition: color 0.2s ease;
   }
 
-  nav.sidebar a.active {
-    font-weight: bold;
-    text-decoration: underline;
+  /* Sidebar toggle button (hidden by default) */
+  .sidebar-toggle {
+    display: none;
+    margin: 10px;
+    background: var(--pico-primary-button-background);
+    color: var(--pico-primary-background-light);
   }
-
-  main {
-    flex: 1;
-    padding: 2rem;
-  }
-
   @media (max-width: 768px) {
-    aside {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      transform: translateX(-100%);
-      z-index: 1000;
-    }
 
     /* more compact padding on very small screens */
     main {
       padding: 1rem;
+      margin:0px 0px 0px 0px!important;
     }
+
+    .layout {
+      grid-template-columns: 1fr; /* only main content visible */
+    }
+  
+    aside {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      transform: translateX(-100%); /* hidden by default */
+      z-index: 10;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
 
     aside.is-open {
       transform: translateX(0);
     }
 
+    aside nav a {
+      display: block;
+      padding: 0.5rem 0;
+      text-decoration: none;
+    }
+    aside nav a:hover {
+      text-decoration: underline;
+    }
+
+        /* Show toggle button */
+    .sidebar-toggle {
+      display: inline-block;
+    }
+
     .sidebar-toggle {
       position: fixed;
-      top: 1rem;
-      left: 1rem;
+      top: 10px;
+      left: 10px;
       z-index: 1100;
     }
   }

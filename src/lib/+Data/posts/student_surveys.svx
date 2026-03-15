@@ -1,7 +1,7 @@
 ---
 title: 'Understanding student needs with surveys'
 summary: "To help students articulate their questions about math, I use a question ranking system so students understand the kinds of questions they can ask, and can indicate how important they are to that student." 
-tags: ["math", "extension", "student voice"]
+tags: ["math", "student voice"]
 ---
 
 
