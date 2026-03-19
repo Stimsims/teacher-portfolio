@@ -3,7 +3,7 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
-  export let {work_posts, math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
+  export let {work_posts, engagement_posts, math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
 
   import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
@@ -21,7 +21,6 @@
 
   import cert_protecting_children from '$lib/assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_cyber_security from '$lib/assets/images/certificates/cyber-security.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_ai_for_edu from '$lib/assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_google_ai from '$lib/assets/images/certificates/google_ai_educators.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_teaching_ai_primary from '$lib/assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import cert_solar_language from '$lib/assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
@@ -108,26 +107,12 @@
     </section>
     <section id="professional_development" class="page">
         <h2>Professional Development</h2>
-        <p>I've completed a variety of short courses to improve my skills in technology, AI and literacy.</p>
-        <ImageCollage images={[cert_teaching_ai_primary, cert_protecting_children, 
-        cert_ai_for_edu, cert_cyber_security, cert_google_ai, cert_solar_language]}  />
-    </section>
-    <section id="engagement">
-      <h2>Engagement</h2>
-      <div class="stack-grid">
-          <div class="grid-item">
-            <h4>Personalised Contexts</h4>
-            <p>Use AI to create examples that connect the big ideas of math, to topics the student has a rich knowledge and interest in.</p>
-          </div>
-          <div class="grid-item">
-            <h4>Concrete Manipulatives</h4>
-            <p>Using the Australian math interview online, the students comprehension of numeracy concepts like numbers, counting on, multiplication arrays and division strategies can be understood. It is critical to give beginner math maticians many opportunities to connect abstract numbers and math language with concrete scenarios and motions (Bragg and Herbert, 2017).</p>
-          </div>
-          <div class="grid-item">
-            <h4>Self Assessment and Growth Mindset</h4>
-            <p>Ask students to estimate their strengths and weaknesses in different areas of math, using mathematical vocabulary. Verbalising and justifying why they are confident or unconfident in areas of math is a form of self-assessment. It is a useful technique to reduce anxiety around disappointing or unexpected performance on questions, by shifting emphasis to accuracy of their own understanding of their skills and growth.</p>
-          </div>
-      </div>
+        <h4>Generative AI Privacy and Ethics</h4>
+        <ImageCollage images={[cert_teaching_ai_primary, cert_cyber_security, cert_google_ai]}  />
+        <h4>Literacy Certificates</h4>
+        <ImageCollage images={[cert_solar_language]}  />
+        <h4>Health and Wellbeing</h4>
+        <ImageCollage images={[cert_protecting_children]}  />
     </section>
     <section id="classroom_management">
         <h2>Classroom Management</h2>
@@ -148,32 +133,21 @@
             </ul>
           </div>
         </div>
-        <div>
-          <h4>Daily Engagement: The Mystery Motivator Game</h4>
-          <p>Each day, use this gamified ritual to refresh attention on behavioral expectations:</p>
-          <ol>
-            <li>Collaborative behavior list: Create an agreed list of positive behaviors showing respect to peers and teacher</li>
-            <li>Random selection: Each morning, a student randomly selects one behavior from the list for fairness. This prevents the teacher from arbitrarily enforcing behaviours for specific students.</li>
-            <li>Secret posting: Keep the selected behavior confidential and post it somewhere visible</li>
-            <li>End-of-day reveal: Open the mystery behavior and ask a student who modelled it to lead a small game for the class.</li>
-          </ol>
-        </div>
-    </section>
-    <section id="lesson_planning">
+      <h2>Engagement</h2>
+      <MarkdownList examples={engagement_posts}/>
       <h2>Lesson Planning</h2>
-      <h4>Lessons</h4>
-      <p>Lessons are built around a chosen pedagogical approach that suits the learning criteria — explicit instruction, inquiry, problem-solving, or a blend. Social constructivist principles underpin activities, with students using domain-specific vocabulary to interpret and theorise about tests and tasks completed in class. In mathematics, lesson design follows Piagetian stages of development, ensuring that students master concrete representations before progressing to abstract concepts.</p>
-      <h4>Sequences</h4>
-      <p>The sequence of learning begins with analysis of student assessment data to identify needs and prioritise concepts. Lessons within the sequence must generate further assessment evidence that students can use to measure their distance to success and predict their own achievement. This ongoing self-assessment is a key factor in improving outcomes, as identified in Hattie’s review. Teachers use the same data to refine the proportion of time allocated to different concepts in the sequence, ensuring targeted support where it is most needed.</p>
-      <h4>Favourites</h4>
-      <ul>
-        <li>Albert Bandura. (1971). Social Learning Theory. General Learning Press. <a href="https://www.asecib.ase.ro/mps/Bandura_SocialLearningTheory.pdf">https://www.asecib.ase.ro/mps/Bandura_SocialLearningTheory.pdf</a></li>
-        <li>Rudolf Dreikurs, Pearl Cassel, & Eva Dreikurs Ferguson. (2004). Discipline without tears. <a href="https://archive.org/details/isbn_0723812835089">https://archive.org/details/isbn_0723812835089</a></li>
-        <li>Hattie, J., author. (2009). Visible learning: A synthesis of over 800 meta-analyses relating to achievement / John A.C. Hattie. <a href="https://research.ebsco.com/linkprocessor/plink?id=0bc5a0eb-efc3-3860-bbde-f7350413cc2c">https://research.ebsco.com/linkprocessor/plink?id=0bc5a0eb-efc3-3860-bbde-f7350413cc2c</a></li>
-      </ul>
-    </section>
-
-    <section id="behaviour_management">
+      <div class="grid-item">
+          <h4>Lessons</h4>
+          <p>Lessons are built around a chosen pedagogical approach that suits the learning criteria — explicit instruction, inquiry, problem-solving, or a blend. Social constructivist principles underpin activities, with students using domain-specific vocabulary to interpret and theorise about tests and tasks completed in class. In mathematics, lesson design follows Piagetian stages of development, ensuring that students master concrete representations before progressing to abstract concepts.</p>
+          <h4>Sequences</h4>
+          <p>The sequence of learning begins with analysis of student assessment data to identify needs and prioritise concepts. Lessons within the sequence must generate further assessment evidence that students can use to measure their distance to success and predict their own achievement. This ongoing self-assessment is a key factor in improving outcomes, as identified in Hattie’s review. Teachers use the same data to refine the proportion of time allocated to different concepts in the sequence, ensuring targeted support where it is most needed.</p>
+          <h4>Favourites</h4>
+          <ul>
+            <li>Albert Bandura. (1971). Social Learning Theory. General Learning Press. <a href="https://www.asecib.ase.ro/mps/Bandura_SocialLearningTheory.pdf">https://www.asecib.ase.ro/mps/Bandura_SocialLearningTheory.pdf</a></li>
+            <li>Rudolf Dreikurs, Pearl Cassel, & Eva Dreikurs Ferguson. (2004). Discipline without tears. <a href="https://archive.org/details/isbn_0723812835089">https://archive.org/details/isbn_0723812835089</a></li>
+            <li>Hattie, J., author. (2009). Visible learning: A synthesis of over 800 meta-analyses relating to achievement / John A.C. Hattie. <a href="https://research.ebsco.com/linkprocessor/plink?id=0bc5a0eb-efc3-3860-bbde-f7350413cc2c">https://research.ebsco.com/linkprocessor/plink?id=0bc5a0eb-efc3-3860-bbde-f7350413cc2c</a></li>
+          </ul>
+        </div>
       <h2>Behaviour Management</h2>
       <div class="stack-grid">
           <div class="grid-item">

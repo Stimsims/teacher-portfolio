@@ -7,6 +7,7 @@ export function load() {
   console.log("work experience posts", getPostsByTag(posts, "work"))
   return {
     work_posts: getPostsByTag(posts, "work"), 
+    engagement_posts: getPostsByTag(posts, "engagement"), 
     math_posts: getPostsByTag(posts, "math"), 
     ai_certificate_posts: getPostsByTag(posts, "certificate"),
     literacy_posts: getPostsByTag(posts, "literacy"),

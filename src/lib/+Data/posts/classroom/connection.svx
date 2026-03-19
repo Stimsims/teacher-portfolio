@@ -1,0 +1,13 @@
+---
+title: "Connective Contexts"
+summary: "Encouraging students to connect classroom curriculum content with their personal lives and interests."
+tags: ["engagement"]
+---
+
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+</script>
+
+# Connective Contexts
+
+Encouraging students to connect classroom curriculum content with their personal lives and interests.

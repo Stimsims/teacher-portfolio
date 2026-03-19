@@ -7,7 +7,7 @@ tags: ["certificate"]
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
   import cyber_security from '$lib/assets/images/certificates/cyber-security.png?enhanced&w=300;600;1200;2000&format=webp';
-  import generative_ai_for_education from '$lib/assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import generative_ai_for_education from '$lib/assets/images/certificates/google_ai_educators.png?enhanced&w=300;600;900;1200;2000&format=webp';
   import teaching_ai_primary from '$lib/assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
 </script>
 

@@ -1,0 +1,13 @@
+---
+title: "Self Assessment"
+summary: "Ask students to estimate their strengths and weaknesses in different learning areas"
+tags: ["engagement"]
+---
+
+<script>
+  import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
+</script>
+
+## Self Assessment and Growth Mindset
+
+Ask students to estimate their strengths and weaknesses in different areas of math, using mathematical vocabulary. Verbalising and justifying why they are confident or unconfident in areas of math is a form of self-assessment. It is a useful technique to reduce anxiety around disappointing or unexpected performance on questions, by shifting emphasis to accuracy of their own understanding of their skills and growth.
