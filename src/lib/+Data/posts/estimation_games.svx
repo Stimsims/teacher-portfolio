@@ -5,8 +5,8 @@ tags: ["math", "estimation"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
-  import estimate_60cm from './../../../assets/images/math/estimate_60cm.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import measure_numberline from './../../../assets/images/math/numberline_armstrength.png?enhanced&w=300;600;1200;2000&format=webp';
+  import estimate_60cm from '$lib/assets/images/math/estimate_60cm.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import measure_numberline from '$lib/assets/images/math/numberline_armstrength.png?enhanced&w=300;600;1200;2000&format=webp';
 </script>
 
 # Easy Estimation Warm Ups

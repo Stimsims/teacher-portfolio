@@ -1,6 +1,6 @@
 <!-- src/lib/Collage.svelte -->
 <script>
-  //import MyImage from './../../assets/images/L3 habitat game.jpeg?enhanced&widths=400;800&format=webp';
+  //import MyImage from '$lib/assets/images/L3 habitat game.jpeg?enhanced&widths=400;800&format=webp';
   import './ImageCollage.css'
 
   export let images = [];

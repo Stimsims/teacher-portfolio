@@ -4,11 +4,11 @@
     // That tells SvelteKit: “Treat all my pages as static and prerender them.”
   export const prerender = true;
   import './../../app.css';
-  import img_map from './../../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_tafe from './../../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_house from './../../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_idioms from './../../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import selfie from './../../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
+  import img_map from '$lib/assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_tafe from '$lib/assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_house from '$lib/assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_idioms from '$lib/assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import selfie from '$lib/assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
 
   import Header from '$lib/Header/Header.svelte';
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';

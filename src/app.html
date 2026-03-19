@@ -10,9 +10,28 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="%sveltekit.assets%/pico.classless.violet.min.css">
+
+		%svelte.head%
 		%sveltekit.head%
+		<style>
+		/* Hide until SvelteKit + CSS are ready */
+		body{
+			opacity:1;
+			transition: opacity 1s ease-in-out;
+		}
+		body.preload {
+			opacity:0;
+		}
+		</style>
+	
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+	<body data-sveltekit-preload-data="hover"  class="preload">
+		<script>
+			// Remove the preload class as soon as JS + CSS are loaded
+			document.addEventListener('DOMContentLoaded', () => {
+				document.body.classList.remove('preload');
+			});
+		</script>
+		<div  id="svelte" style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

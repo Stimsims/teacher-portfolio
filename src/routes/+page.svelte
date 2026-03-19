@@ -3,7 +3,7 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
-  export let {math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
+  export let {work_posts, math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
 
   import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
@@ -19,17 +19,17 @@
   import TagList from '$lib/TagList/TagList.svelte';
 
 
-  import cert_protecting_children from './../assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_cyber_security from './../assets/images/certificates/cyber-security.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_ai_for_edu from './../assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_google_ai from './../assets/images/certificates/google_ai_educators.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_teaching_ai_primary from './../assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import cert_solar_language from './../assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
-  import selfie from './../assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
-  import img_map from './../assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_tafe from './../assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_house from './../assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img_activity_idioms from './../assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_protecting_children from '$lib/assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_cyber_security from '$lib/assets/images/certificates/cyber-security.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_ai_for_edu from '$lib/assets/images/certificates/generative_ai_for_education.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_google_ai from '$lib/assets/images/certificates/google_ai_educators.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_teaching_ai_primary from '$lib/assets/images/certificates/teaching_ai_primary.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import cert_solar_language from '$lib/assets/images/certificates/solar_language.png?enhanced&w=300;600;900;1200;2000&format=webp'
+  import selfie from '$lib/assets/images/selfies/hvb-far.png?enhanced&w=300;600;900;1200;2000&format=webp'
+  import img_map from '$lib/assets/images/tafeAMEP/morwell_map.png?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_tafe from '$lib/assets/images/tafeAMEP/tafe_building.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_house from '$lib/assets/images/tafeAMEP/activity_house.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img_activity_idioms from '$lib/assets/images/tafeAMEP/activity_idioms.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
 
   let selected = /** @type {null | { title: string, summary: string, details: string }} */ (null);
 
@@ -104,26 +104,7 @@
     </section>
     <section id="work_experience" class="page">
         <h2>Work and Volunteering Experience</h2>
-      <h3 id="tafe_amep_volunteering" class="margin-vertical-large">TAFE AMEP Volunteering</h3>
-      <Header img={img_tafe} alt="The Tafe building in Morwell, Victoria" class="margin-vertical-large"  >
-        <p>In 2025 I volunteered in the <a href="https://immi.homeaffairs.gov.au/settling-in-australia/amep/overview">Australian Migrant English Program (AMEP)</a> at TAFE in Morwell, Victoria.</p>
-        <p>Through this program I worked with a wide range of new arrivals to Australia. This volunteer role required creativity in communicating complex ideas like English idioms to students. </p>
-        <p>Importantly, sensitivity to students often difficult circumstances was critically important to creating a positive learning space.</p>
-      </Header>
-      <div class="margin-vertical-large">
-        <ImageCollage images={[img_activity_house, img_activity_idioms]} class="margin-vertical-small" />
-        <h4 class="text-center">Creative and Quality English Lessons</h4>
-        <ul>
-          <li> <p class="text-left">Working with <a href="https://immi.homeaffairs.gov.au/settling-in-australia/amep/resources">government resources to support all learners</a>, no matter what prior knowledge or experiences they have is a pertinent skill in the modern, multicultural classroom.</p></li>
-          <li> <p class="text-left">The teachers delivering these programs were pioneers in English education. It was a privilege to work with passioante teachers who innovated creative ways to make English useful and enjoyable for their students. </p></li>
-        </ul>
-      </div>
-      <Header img={selfie} alt="A selfie of pre-service teacher student" class="margin-vertical-large" >
-        <div>
-          <h4>Teaching English to Beginners</h4>
-        <p>Through this wonderful volunteering opportunity in which I worked with creative and passionate teachers, and warm and patient students, I gained experience in connecting English with a wide variety of cultures and backgrounds.</p>
-        </div>
-      </Header>
+        <MarkdownList examples={work_posts}/>
     </section>
     <section id="professional_development" class="page">
         <h2>Professional Development</h2>

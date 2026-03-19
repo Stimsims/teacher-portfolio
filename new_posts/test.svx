@@ -5,8 +5,8 @@ tags: ["math", "extension", "real-world"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
-  import img1 from './../../../assets/images/L3 habitat game.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img2 from './../../../assets/images/zelda.jpg.webp?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img1 from '$lib/assets/images/L3 habitat game.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img2 from '$lib/assets/images/zelda.jpg.webp?enhanced&w=300;600;900;1200;2000&format=webp';
 
   import BarChart from '$lib/Charts/Bar.svelte';
   import PieChart from '$lib/Charts/Pie.svelte';

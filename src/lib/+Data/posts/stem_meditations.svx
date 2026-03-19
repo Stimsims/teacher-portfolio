@@ -6,7 +6,7 @@ tags: ["STEM", "science"]
 
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
-  import stem_meditations from './../../../assets/images/products/stem_meditations.jpg?enhanced&w=300;600;1200;2000&format=webp';
+  import stem_meditations from '$lib/assets/images/products/stem_meditations.jpg?enhanced&w=300;600;1200;2000&format=webp';
 </script>
 
 # Stem Meditations

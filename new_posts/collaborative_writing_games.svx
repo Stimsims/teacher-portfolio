@@ -5,11 +5,11 @@ tags: ["math", "extension", "real-world"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
-  import writing_example from './../../../assets/images/literacy/pair writing example.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import work_1 from './../../../assets/images/literacy/pair writing 1.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import work_2 from './../../../assets/images/literacy/pair writing 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import work_3 from './../../../assets/images/literacy/pair writing 3.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import feedback from './../../../assets/images/literacy/paired writing feedback.png?enhanced&w=300;600;1200;2000&format=webp';
+  import writing_example from '$lib/assets/images/literacy/pair writing example.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_1 from '$lib/assets/images/literacy/pair writing 1.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_2 from '$lib/assets/images/literacy/pair writing 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import work_3 from '$lib/assets/images/literacy/pair writing 3.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import feedback from '$lib/assets/images/literacy/paired writing feedback.png?enhanced&w=300;600;1200;2000&format=webp';
 </script>
 
 # Collaborative Writing Games

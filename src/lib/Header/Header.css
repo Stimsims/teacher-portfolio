@@ -1,0 +1,28 @@
+/* Unique side-by-side layout */
+.side-by-side {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  gap: var(--pico-spacing);
+  align-items: stretch;
+}
+
+/* Desktop / wide screens */
+@media (min-width: 769px) {
+  .side-by-side {
+    flex-direction: row;    /* Side-by-side on desktop */
+    align-items: center;
+  }
+
+  .side-by-side > * {
+    flex: 1 1 0;
+    min-width: 0; /* Prevent overflow */
+  }
+}
+
+/* Optional image styling */
+.side-by-side img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--pico-border-radius);
+}

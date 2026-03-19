@@ -3,7 +3,7 @@
   import MarkdownList from '$lib/DataList/MarkdownList.svelte';
   export let data;
   console.log(`Svelte view data`, data);
-  const { tag, filteredPosts } = data;
+  const { tag, filteredPosts, tagDescription } = data;
   console.log(`Svelte view received tag: ${tag}`, filteredPosts);
 </script>
 
@@ -11,6 +11,7 @@
   <main>
     <section id="home" class="page">
         <h1>Posts tagged: {tag}</h1>
+        <p>{tagDescription}</p>
 
         {#if filteredPosts && filteredPosts.length > 0}
             <div>

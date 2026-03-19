@@ -1,5 +1,5 @@
 export const posts = Object.entries(
-  import.meta.glob('/src/lib/+Data/posts/*.svx', { eager: true })
+  import.meta.glob('/src/lib/+Data/posts/**/*.svx', { eager: true })
 ).map(([path, module]) => {
   const { metadata, default: component } = module; // SVX default export is the Svelte component
   return {

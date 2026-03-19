@@ -5,10 +5,10 @@ tags: ["math", "extension", "real-world"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';
-  import img1 from './../../../assets/images/math_extension/extension compensation strategy 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
-  import img2 from './../../../assets/images/math_extension/extension compensation strategy 3.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import img4 from './../../../assets/images/math_extension/extension compensation strategy.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
-  import restaurant_addition from './../../../assets/images/math_extension/restaurant_addition.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img1 from '$lib/assets/images/math_extension/extension compensation strategy 2.jpeg?enhanced&w=300;600;1200;2000&format=webp';
+  import img2 from '$lib/assets/images/math_extension/extension compensation strategy 3.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import img4 from '$lib/assets/images/math_extension/extension compensation strategy.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
+  import restaurant_addition from '$lib/assets/images/math_extension/restaurant_addition.jpeg?enhanced&w=300;600;900;1200;2000&format=webp';
 </script>
 
 # Extension Challenges
