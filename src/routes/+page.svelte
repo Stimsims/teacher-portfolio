@@ -3,8 +3,9 @@
 <script>
   /** @type {{ examples: { title: string, summary: string, details: string }[] }} */
   export let data;
-  export let {work_posts, engagement_posts, math_posts, ai_certificate_posts, literacy_posts, tag_count} = data;
-
+  export let {work_posts, engagement_posts, 
+    math_posts, math_engage_posts, math_access_posts, math_assessment_posts, math_extension_posts, 
+    ai_certificate_posts, literacy_posts, tag_count} = data;
   import './../app.css';
   import TeachingExampleCard from '$lib/Card/Card.svelte';
   import Modal from '$lib/Modal/Modal.svelte';
@@ -17,6 +18,7 @@
   import BarChart from '$lib/Charts/Bar.svelte';
   import Header from '$lib/Header/Header.svelte';
   import TagList from '$lib/TagList/TagList.svelte';
+  import ExpandableList from '$lib/ExpandableList/list.svelte';
 
 
   import cert_protecting_children from '$lib/assets/images/certificates/protecting_children.png?enhanced&w=300;600;900;1200;2000&format=webp';
@@ -81,25 +83,6 @@
     <section id="about" class="page">
         <h2>About Me</h2>
         <p>Games for fluency, self-assessment for growth, celebrating mistakes, connecting with funds of knowledge</p>
-        <div class="stack-grid">
-          <div class="grid-item">
-            <h4>Engagement and Behaviour</h4>
-            <p>Calm, predictable routines with co-created norms; expectations are explicitly taught and positively reinforced. Visual schedules, timers, clean transitions, and purposeful seating reduce anxiety and keep momentum, with consistent de-escalation/restorative language.</p>
-          </div>
-          <div class="grid-item">
-            <h4>Pedagogical Style</h4>
-            <p>I match method to purpose—explicit instruction for new skills, guided practice for consolidation, and inquiry/problem-solving for transfer—using “I do–We do–You do,” worked examples, retrieval, and spacing. In literacy and numeracy I move modelled→shared→guided→independent and concrete→pictorial→abstract.</p>
-          </div>
-          <div class="grid-item">
-            <h4>Differentiation</h4>
-            <p>Low-floor/high-ceiling tasks with multiple product options and fading scaffolds (manipulatives, organisers, sentence frames) ensure access and stretch. Flexible grouping, quick conferring, EAL-sensitive routines, interest-driven contexts, and extension challenges keep everyone engaged.</p>
-          </div>
-          <div class="grid-item">
-            <h4>Assessment</h4>
-            <p>Sequences begin with analysis of student assessment and continue with frequent formative checks (exit tickets, observations, whiteboards) that drive real-time adjustments. Clear learning intentions/success criteria and concise feedback shape next steps; summative tasks align to taught goals and are communicated in clear, strengths-first language.</p>
-          </div>
-      </div>
-      <MarkdownList examples={ai_certificate_posts}/>
     </section>
     <section id="work_experience" class="page">
         <h2>Work and Volunteering Experience</h2>
@@ -109,10 +92,17 @@
         <h2>Professional Development</h2>
         <h4>Generative AI Privacy and Ethics</h4>
         <ImageCollage images={[cert_teaching_ai_primary, cert_cyber_security, cert_google_ai]}  />
-        <h4>Literacy Certificates</h4>
-        <ImageCollage images={[cert_solar_language]}  />
-        <h4>Health and Wellbeing</h4>
-        <ImageCollage images={[cert_protecting_children]}  />
+        <div class="stack-grid">
+          <div class="grid-item">
+            <h4>Literacy Certificates</h4>
+            <ImageCollage images={[cert_solar_language]}  />
+          </div>
+          <div class="grid-item">
+            <h4>Health and Wellbeing</h4>
+            <ImageCollage images={[cert_protecting_children]}  />
+          </div>
+        </div>
+        <MarkdownList examples={ai_certificate_posts}/>
     </section>
     <section id="classroom_management">
         <h2>Classroom Management</h2>
@@ -164,107 +154,37 @@
           </div>
       </div>
     </section>
+
     <section id="math" class="page">
         <h2>Math</h2>
-        <p>Mathematics is a subject where anxiety is common. Connecting the abstract subject to students interests and real life projects can help students stop stressing if the answer is right, and instead support development of 'math sense'. An undertanding of the kind of answer to expect. Bigger? Smaller? Whole Number? Negative?</p>
-        <ul>
-          <li>Emphasise understanding the big ideas and how they connect, over memorisation of steps. Connect this information to the students interests, where they have rich understandings and opportunities for enthusiasm and insight.</li>
-          <li>Design problems that have multiple solution pathways that involve students comparing and evaluating strategies.</li>
-          <li>Reduce test anxiety by asking students to estimate their skill at math topics, before tests are taken. Emphasising accurate understanding of their skills at topics draws student attention to the big ideas of the math curriculum.</li>
-        </ul>
-        <MarkdownList examples={math_posts}/>
-    </section>
-        <section id="math_differentiation">
-      <h2>Math Differentiation</h2>
-      Adapting the math curriculum to student interests can be especially helpful in supporting the following:
-      <ul>
-        <li>Generalisation - showing the big idea in a few examples the student has knowledge and interest in can connect the concepts together and make them more motivational to learn.</li>
-        <li>Prioritise meaning - show, don't tell the student how the math concept is useful in examples and contexts that are relevant to their interests.</li>
-        <li>Engaging tsks with low floor and high ceilings for easy entry and anxiety free exit from the problem, keeping the student in their zone of proximal development.</li>
-      </ul>
-      <h4>Adapting the Curriculum for a Child that Loves Pokemon</h4>
-      <div class="stack-grid">
-          <div class="grid-item">
-            <h4>Algebra</h4>
-            <p>Pokémon daily streak:</p>
-            <p>Each day you keep your catch streak going, you earn a bonus that grows by 5 XP more than the day before. On day 1 you get 5 XP, on day 2 you get 10 XP, on day 3 you get 15 XP, and so on. How can we model the XP you earn each day and the total XP across days?</p>
-            <h4>Define variables</h4>
-            <ol>
-              <li>dn: XP earned on day n (the daily bonus)</li>
-              <li>Tn: total XP earned after n days</li>
-            </ol>
-          </div>
-          <div class="grid-item">
-            <h4>Plan Your Pokémon Journey</h4>
-            <p>Your Goal
-            Get from Pallet Town to the Cerulean Gym and check in between 10:30 and 10:50. Build a feasible itinerary using the timetables below. Show your working for time conversions, durations, and layovers.
-            Timetables (24-hour times)
-            Rail: Pallet Town → Pewter Junction
-            T1: Dep 08:12 → Arr 09:02 (50 min)
-            T2: Dep 08:28 → Arr 09:20 (52 min)
-            T3: Dep 08:45 → Arr 09:40 (55 min)
-            Bus: Pewter Junction → Cerulean City
-            B1: Dep 09:15 → Arr 09:55 (40 min)
-            B2: Dep 09:35 → Arr 10:15 (40 min)
-            B3: Dep 10:05 → Arr 10:45 (40 min)
-            Walks & Open Hours
-            Cerulean Station → Gym: 1.2 km (assume 5 km/h walking speed)
-            Poké Mart (Cerulean): 09:45–16:30 (shopping takes 10 min)</p>
-          </div>
-          <div class="grid-item">
-            <h4>Wild Grass Rectangle Run — Probability Example</h4>
-            <p>
-            Scenario
-            A trainer walks across every tile of a rectangular patch of wild grass.
-            Each tile independently has a 10% chance of triggering a wild Pokémon encounter when stepped on.
-            The patch is 5 × 5 tiles (so you step on 25 tiles, once each).
-            Questions
-            What is the probability you get at least one encounter while crossing the whole patch?
-            What is the expected number of encounters?
-            Worked Solution
-            Number of tiles: 
-            N=5×5=25
-            Chance of an encounter on a tile: 
-            p=0.10
-            Chance of no encounter on one tile: 
-            1−p=0.90
-            </p>
-          </div>
-        </div>
-      <div>
-        <h4>Adapting the Curriculum for a Child that Loves My Little Pony</h4>
-          <div class="stack-grid">
-            <div class="grid-item">
-              <h2>Fractions</h2>
-              <p>Rainbow Dash is training on three race courses. Each lap has a different length:   </p>
-              <p>Cloudsdale Sprint: 400 m per lap </p>
-              <p>Equestria Oval: 600 m per lap </p>
-              <p>Wonderbolt Loop: 1 km (1000 m) per lap </p>
-              <p>Use: </p>
-              <p>Distance flown = (fraction of a lap) × (lap length) </p>
-              <p>Laps completed = (total distance) ÷ (lap length) </p>
-              <p>A) Cloudsdale Sprint – 400 m laps Rainbow flies 3/4 of a lap. How far is that in metres? </p>
-              <p>B) Equestria Oval – 600 m laps. Compare: Which is farther— 2/3 of the 600 m track, or 3/4 of the 400 m track? Show your working and circle the larger distance.</p>
-            </div>
-            <div class="grid-item">
-              <h2>Mail Route Arithmetic Sequence</h2>
-              <p>Story: The mailmare delivers to 8 houses on day 1, then adds 2 houses each day on the same route.</p>
-              <p>Model: </p>
-              <p>hn=8+2(n−1).</p>
-              <p>Tasks:</p>
-              <p>a) How many houses on day 12?</p>
-              <p>b) Find a rule for the total houses delivered over n days, and use it to get the total for 12 days.</p>
-          </div>
-        </div>
+    <ExpandableList items={[
+      { 
+        title: "Engagement - Answer 'Why?' with Place-Based Modelling", 
+        content: 'I like to engage students in a lesson by first focusing on why a math concept is useful. My math lessons often start with a place-based context question using the math concept of the lesson. Students are invited to guess or deduce an answer, and write it on the board. This represents the math concept in a real-life context.',
+        posts: math_engage_posts
+      },
+      { 
+        title: 'Access - Universal Design and Quick Reviews', 
+        content: "Beginner mathematicians access to the lesson is facilitated by five minute quick reviews at the start of the lesson. The teacher's demonstration of using basic math operations to model the problem, and then refine the model using the math concept starts with the basics for beginners, and goes upward from there. Student's can use the model to solve the lesson that they are ready for.",
+        posts: math_access_posts
+      },
+      { 
+        title: 'Data - Peer-Assessment through Consensus', 
+        content: "Math is a vehicle for decision making. In real life, computations have correct answers, but the 'best' course of action does not. Student's understanding of the concepts is illuminated by their ability to understand which answer best aligns with their personal values in this context, and calculate it. Outliers could be a misunderstanding of math, or a difference of opinion. Mathematical justification determines which.",
+        posts: math_assessment_posts
+      },
+      { 
+        title: 'Extension - Representing in Contexts of Student Interest', 
+        content: "Student's who have mastered the concept are invited to find examples of the math concept in contexts of their personal interest. Well chosen contexts are shared with the class to support abstraction. Additionally, there are more complex extension problems available for student's who wish to try them. ",
+        posts: math_extension_posts
+      }
+    ]} />
     </section>
     <section id="literacy" class="page">
         <h2>Literacy</h2>
-        <p>Here's how I teach literacy...</p>
-        <ul>
-          <li>Shared reading and writing: paired activities of reading and writing can turn an isolated activity into a creative game. It allows students an important degree of autonomy in which writing task they'd like to do, with their partner performing the other. This evaluation is useful in developing student awareness of the components of reading and comprehension.</li>
-          <li>Ordering story events: to support student comprehension and understand of sequence, cause and effect, ordering story events is an excellent activity. Taking a print out of a story apart and re-organising the events back into order is an excellent exercise in understanding character motivations.</li>
-          <li>Self-assessment: asking students to assess the quality of their answer against a rubric focuses student attention on the core skills of reading and writing. By articulating and justifying their strengths and weaknesses, students learn how activities contribute to their mastery of skills. </li>
-        </ul>
+        <p>Pedagogical Approach - explicit teaching and games - to get reading practice up</p>
+        <p>Lesson Planning - oral first in humanities lessons, culturally responsive stories, authentic reading and writing tasks</p>
+        <p>Assessment: self-assessment and randomised assessment. Whole class chooses what to assess in their writing, and scores themselves. Random checks to ensure they're getting it right.</p>
         <MarkdownList examples={literacy_posts}/>
     </section>
     <!-- <section id="technology" class="page">

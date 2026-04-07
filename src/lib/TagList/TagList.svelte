@@ -19,6 +19,7 @@
   .tags {
     list-style: none;
     padding: 0;
+    text-align: center;
   }
   .tag {
     display: inline-block;

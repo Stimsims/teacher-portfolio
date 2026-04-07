@@ -1,0 +1,9 @@
+---
+title: "Community Connected Place-Based Contexts"
+summary: "The math lesson is contextualised in examples relevant to the student's families and local community"
+tags: ["AITSL 2.1","AITSL 2.2", "Aboriginal and Torres Strait Islander Support"]
+sections: ["math_access"]
+---
+
+## Place-Based Contexts
+Local community contexts are used to show how math can connect with community concerns to answer questions and make decisions. This is especially important for supporting Aboriginal and Torres Strait Islander student's map their culture's approach to math with school curriculum approaches. 

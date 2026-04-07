@@ -1,0 +1,16 @@
+---
+title: "Basic to Refined Math Models"
+summary: "Using basic and refined models to facilitate access to lesson content and encourage creativity."
+tags: ["AITSL 2.1","AITSL 2.2"]
+sections: ["math_access"]
+---
+
+## Basic Model Refined Using Class Concept
+To facilitate access to class content for beginner mathematicians, an important property of math modelling is capitalised on. Math models are as good as they need to be. 
+
+#### Basic Models
+A basic but poor math model will be used to find answers to the class question. These basic models would use counting and simple operations like addition. This enables students developing core skills to participate in calculating an answer to the class question.
+
+#### Refined Models
+I then demonstrate how the lesson focus math concept can be used to refine the model to get a more accurate answer. This demonstrates how the math concept supports decision making. It also makes the creative element of math a prominent feature in each lesson. 
+

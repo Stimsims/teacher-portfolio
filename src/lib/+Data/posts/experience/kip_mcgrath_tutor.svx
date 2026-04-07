@@ -1,0 +1,9 @@
+---
+title: 'Kip McGrath Math and English Tutor'
+summary: "At-level small group support for kids that need a little extra support."
+tags: ["work", "math", "literacy", "technology"]
+---
+
+## Kip McGrath Tutor
+I work as a tutor at the Kip McGrath tutoring center. They have an excellent tutoring system which focuses on frequent assessments and at-level content to build student confidence and independence. 
+All work is individually tailored so students are getting 80% right, and 20% wrong, working in their zone of proximal development. 

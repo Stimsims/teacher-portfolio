@@ -1,0 +1,24 @@
+---
+title: "Quick Review from the Start"
+summary: "A quick review of the core math concepts, from digits to the current lesson focus"
+tags: ["AITSL 2.1","AITSL 2.2"]
+sections: ["math_access"]
+---
+
+
+
+## Quick Review from the Start
+These are 5 minute reviews at the start of each lesson that cover the core concepts of math up to the present lesson focus. The review briefly covers:
+- the 10 digits
+- place value
+- the number line
+- dot diagrams of addition, subtraction, multiplication and division
+- dot diagram to number line position
+- subtraction to negatives, multiplication to multi-digit numbers, division to fractions
+- multi-dimensional co-ordinates with 2 axis. Trigonometry. 
+
+## Bruner's Representations
+Bruner described student's as moving from concrete, to iconic, to symbolic skills in math.
+
+#### Dot Diagrams
+Support transition from concrete to iconic, which can be used in any context including tests and exams, to visualise the problem. 

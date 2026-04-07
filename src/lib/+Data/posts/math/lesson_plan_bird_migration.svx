@@ -1,7 +1,8 @@
 ---
-title: 'Cross-curricular Lesson Plan - Math and Biology'
+title: 'Interdisciplinary Lesson Plan - Math and Biology'
 summary: "Maths is a language, it's strengths are best understood when studying the natural world. A game of 'migration' tag sharpened kids data gathering and display skills, while keeping them excited and active."
-tags: ["math", "HPE", "real-world"]
+tags: ["lesson-plan", "interdisciplinary]
+sections: ["math_assessment"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';

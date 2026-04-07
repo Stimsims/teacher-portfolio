@@ -5,6 +5,7 @@
 
   // Provided from parent
   export let examples;
+  export let compact = false;
 
   let markdownComponent = null;
   let currentExample = null;
@@ -30,16 +31,20 @@
 
 <section class="example-list">
   {#each examples as example}
-    <div class="example-card" >
+  <div>
+       <TagList tags={example.tags || []} />
+      <div class="example-card" on:click={() => openModal(example)}>
       <h2 >
-        <a class="opal-text">
+        <a >
           {example.title || "loading"}
         </a>
       </h2>
-      <TagList tags={example.tags || []} />
-      <p>{example.summary || "loading summary"}</p>
-      <button on:click={() => openModal(example)}>View Details</button>
+      {#if !compact}
+        <p>{example.summary || "loading summary"}</p>
+      {/if}
     </div>
+
+  </div>
   {/each}
 </section>
 

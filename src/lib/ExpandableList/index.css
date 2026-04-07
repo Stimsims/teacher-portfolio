@@ -1,0 +1,117 @@
+/* Container with vertical left border */
+.indexed-accordion {
+  border-left: 3px solid var(--pico-muted-border-color);
+  margin: 2rem 0;
+  padding-left: 0.5rem;
+}
+
+/* Each accordion item */
+.accordion-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Header styling with index */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  background: var(--pico-background);
+  border: 1px solid var(--pico-muted-border-color);
+  border-left: none;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: var(--pico-muted-color);
+}
+
+/* Index number styling */
+.accordion-header .index {
+  display: inline-block;
+  min-width: 2rem;
+  font-weight: bold;
+  color: var(--pico-primary);
+  margin-right: 0.5rem;
+}
+
+/* Hidden content */
+.accordion-content {
+  display: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--pico-muted-border-color);
+  border-top: none;
+  background: var(--pico-card-background-color, #fff);
+}
+
+/* Active (open) content */
+.accordion-content.active {
+  display: block;
+}
+
+.expandable-list{
+  padding: 5px;
+    margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: -20px 0px 20px 5px var(--pico-secondary-background);
+  width:100%;
+}
+
+
+.indexed-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem 0;
+  border-left: 2px solid #ccc; /* vertical connector */
+  padding-left: 1.5rem;
+}
+
+.indexed-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.indexed-item .headline {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.indexed-item .headline h3{
+    margin:0;
+}
+
+.indexed-item .index {
+  background: #ccc;
+  color: white;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.indexed-item .content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: all 0.3s ease;
+  padding-left: 2rem; /* align with index */
+}
+
+.indexed-item.open .content {
+  max-height: 500px; /* large enough to fit content */
+  opacity: 1;
+  transform: translateY(0);
+}

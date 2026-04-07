@@ -13,6 +13,10 @@ export const posts = Object.entries(
 export function getPostsByTag(posts, tag) {
   return posts.filter((post) => post.tags?.includes(tag));
 }
+export function getPostsBySection(posts, section) {
+  console.log(`Filtering posts by section: ${section}`, posts);
+  return posts.filter((post) => post.sections?.includes(section));
+}
 
 export function countPostsByTag(posts) {
     let tagCounts = {};

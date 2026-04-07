@@ -24,7 +24,6 @@
     { id: 'professional_development', label: 'Professional Development' },
     { id: 'classroom_management', label: 'Classroom Management' },
     { id: 'math', label: 'Math' },
-    { id: 'math_differentiation', label: 'Math Differentiation' },
     { id: 'literacy', label: 'Literacy' },
     { id: 'contact', label: 'Contact' }
   ];

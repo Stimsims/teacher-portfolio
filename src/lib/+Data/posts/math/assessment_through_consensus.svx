@@ -1,0 +1,19 @@
+---
+title: "Assessment Through Consensus"
+summary: "Student's are given the agency to represent their values mathematically. If the mathematical justification is valid, they're correct"
+tags: ["AITSL 5.1","AITSL 5.2"]
+sections: ["math_assessment"]
+---
+
+## Open-Ended problems
+
+
+## Interesting Contexts
+The teacher finds place-based, relevant contexts in the student's lives to represent the math concepts in. An open ended problem is one where there are a range of acceptable answers, that would result in different 'endings' for the problem.
+While the mathematical calculations have right or wrong answers, what variables and expressions should minimise or maximise is an open-ended question of values.
+When student's disagree on what an answer should be, they are invited to mathematically justify their beliefs and approaches to solving the problem. By writing their math argument down and articulating it, it makes their learning visible.
+
+#### Context Examples
+- A project goes over budget, maximises spending, minimises it or is under funded. The results in the problem context can be creative and imaginative. 
+- A vehicle or mechanical item succeeds, fails or explodes depending on the class consensus.
+- In n years the person's savings plan ends up getting them the item they want, or fails to. 

@@ -10,9 +10,9 @@ h2 {
   text-decoration: underline;
 }
 h3 { color: var(--pico-color-violet-500); }
-h4 { color: var(--pico-color-purple-400); }
-h5 { color: var(--pico-color-purple-350); }
-h6 { color: var(--pico-color-purple-300); }
+h4 { color: var(--pico-color-violet-400); }
+h5 { color: var(--pico-color-violet-350); }
+h6 { color: var(--pico-color-violet-300); }
 
 /* make links inside headings match */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -82,28 +82,7 @@ a.opal-text {
   z-index: 0; /* ensure it's above the underline */
 }
 
-/* Underline */
-a.opal-text::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -0.1em; /* shift lower */
-  height: 2px;
-  width: 100%;
-  background-size: 80%;
-  background-position: 0% 50%;
-  border-radius: 9999px;
-  transform: scaleX(0.6);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.3s ease;
-  transform-origin: center;
-  z-index: -1; /* put it under the text */
-}
-a.opal-text:hover::after,
-a.opal-text:focus::after {
-  transform: scaleX(1);
-  opacity: 1;
-}
+
 
 .gradient-text {
   display: inline-block;
