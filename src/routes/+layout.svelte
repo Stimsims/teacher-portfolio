@@ -69,7 +69,7 @@
         {#each sections as section}
           <li>
             <a
-              href={`#${section.id}`}
+              href={`/#${section.id}`}
               class:active={currentSection === section.id}
               on:click|preventDefault={() => scrollToSection(section.id)}
             >
