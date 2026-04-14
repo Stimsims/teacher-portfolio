@@ -6,14 +6,14 @@
     window.location.href = `/tag/${tag}`;
   }
 </script>
-
+<!-- on:click={() => goToTag(tag) }-->
 <ul class="tags">
   {#each tags as tag}
-    <!-- <li class="tag opal-text" on:click={() => goToTag(tag)}> -->
+    <li class="tag opal-text">
         <a href={`/tag/${tag}`}>
           {tag}
         </a>
-    <!-- </li> -->
+    </li>
   {/each}
 </ul>
 

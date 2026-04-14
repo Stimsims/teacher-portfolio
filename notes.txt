@@ -1,0 +1,2 @@
+- I've learned pages will not be built unless there is an a tag with a href for them. 
+- You need to append a "/"+ to the route for it to render from the root. It'll throw errors without it because it'll append "tag/about"

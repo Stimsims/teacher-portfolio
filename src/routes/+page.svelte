@@ -62,7 +62,7 @@
 
   <main>
     <section id="home" class="page">
-          <TagList tags={["math", "literacy", "engagement", "behaviour_management", "classroom_management", "lesson_planning", "technology"]} />
+
           <div class="responsive-row-equal ">
             <div class="max-width-small" >
               <h2>Welcome to my teacher portfolio (Work in Progress)</h2>
@@ -177,6 +177,15 @@
     <!-- <section id="technology" class="page">
         <h2>Technology</h2><p>With a background in programming, web development and AI product development...</p>
     </section> -->
+    <section id="tags" class="page">
+        <h2>AITSL Posts</h2>
+                  <TagList tags={["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", 
+          "2.1", "2.2", "2.3", "2.4", "2.5", "2.6",
+          "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7",
+          "4.1", "4.2", "4.3", "4.4", "4.5",
+          "5.1", "5.2", "5.3", "5.4", "5.5",
+          "6.1", "6.2", "6.3", "6.4",
+          "7.1", "7.2", "7.3", "7.4"]} />
     <section id="contact">
       <h2>Contact</h2>
     </section>

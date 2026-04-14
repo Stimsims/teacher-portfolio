@@ -41,10 +41,10 @@ export function load({ params }) {
   const filteredAitslPosts = posts.filter(post => post.aitsl?.includes(tag));
   const filteredPosts = [...filteredTagPosts, ...filteredAitslPosts];
   
-  if (filteredPosts.length === 0) {
-    // Throw to trigger 404 page
-    throw Error(404, `No posts found for tag: ${tag}`);
-  }
+  // if (filteredPosts.length === 0) {
+  //   // Throw to trigger 404 page
+  //   throw Error(404, `No posts found for tag: ${tag}`);
+  // }
 
-  return { tag, filteredPosts };
+  return { tag, filteredPosts, empty: filteredPosts.length === 0 };
 }
