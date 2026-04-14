@@ -1,0 +1,10 @@
+---
+title: "Environmental Predictability"
+summary: "Use of schedules and timers to build predictable routines"
+tags: ["behaviour"]
+sections: ["behaviour_management"]
+---
+
+#### Environmental Predictability
+- Schedules and timers: Visual indicators help students understand daily rhythms
+- Assigned Seating: Avoid social status struggles on mat by assigning student seating

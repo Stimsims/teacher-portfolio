@@ -1,8 +1,9 @@
 ---
 title: "Quick Review from the Start"
 summary: "A quick review of the core math concepts, from digits to the current lesson focus"
-tags: ["AITSL 2.1","AITSL 2.2"]
+tags: ["accessibility"]
 sections: ["math_access"]
+aitsl: ["2.1", "2.2"]
 ---
 
 

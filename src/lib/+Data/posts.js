@@ -13,6 +13,9 @@ export const posts = Object.entries(
 export function getPostsByTag(posts, tag) {
   return posts.filter((post) => post.tags?.includes(tag));
 }
+export function getPostsByAITSL(posts, tag) {
+  return posts.filter((post) => post.aitsl?.includes(tag));
+}
 export function getPostsBySection(posts, section) {
   console.log(`Filtering posts by section: ${section}`, posts);
   return posts.filter((post) => post.sections?.includes(section));
@@ -36,4 +39,24 @@ export function countPostsByTag(posts) {
     }
     console.log('Flattened tag count:', flattenedTagCount);
     return flattenedTagCount;
+}
+
+export function countPostsByAITSL(posts) {
+    let aitslCounts = {};
+    const flattenedAitslCount = []
+    console.log('Counting AITSL')
+    posts.forEach(post => {
+        if (post.aitsl) {
+            post.aitsl.forEach(a => {
+                console.log(`Counting AITSL: ${a} for post: ${post.title}`);
+                aitslCounts[a] = (aitslCounts[a] || 0) + 1;
+            });
+        }
+    });
+    console.log('AITSL counts:', aitslCounts);
+    for (let tag in aitslCounts) {
+        flattenedAitslCount.push({x: tag, y: aitslCounts[tag]})
+    }
+    console.log('Flattened aitsl count:', flattenedAitslCount);
+    return flattenedAitslCount;
 }

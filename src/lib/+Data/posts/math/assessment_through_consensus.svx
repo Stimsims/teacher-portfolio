@@ -1,8 +1,9 @@
 ---
 title: "Assessment Through Consensus"
 summary: "Student's are given the agency to represent their values mathematically. If the mathematical justification is valid, they're correct"
-tags: ["AITSL 5.1","AITSL 5.2"]
+tags: ["assessment"]
 sections: ["math_assessment"]
+aitsl: ["5.1", "5.2"]
 ---
 
 ## Open-Ended problems

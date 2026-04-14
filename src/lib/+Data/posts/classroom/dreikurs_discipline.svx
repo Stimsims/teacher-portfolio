@@ -1,0 +1,9 @@
+---
+title: "Unmet Needs in Behavioural Challenges"
+summary: "Following Dreikurs approach to classifying challenging behaviour"
+tags: ["behaviour"]
+sections: ["behaviour_management"]
+---
+
+# Dreikurs' Unmet Needs for Challenging Behaviour Comprehension
+Understand and classify student behaviours as manifestations of unmet needs. Adapt classroom content and student pairings to match students to the correct level content for their skill, and partners that can model the necessary behaviour for them to learn. 

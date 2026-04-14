@@ -23,6 +23,7 @@
     { id: 'work_experience', label: 'Work Experience' },
     { id: 'professional_development', label: 'Professional Development' },
     { id: 'classroom_management', label: 'Classroom Management' },
+    { id: 'lesson_planning', label: 'Lesson Planning'},
     { id: 'math', label: 'Math' },
     { id: 'literacy', label: 'Literacy' },
     { id: 'contact', label: 'Contact' }

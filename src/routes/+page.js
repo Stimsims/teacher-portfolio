@@ -1,5 +1,5 @@
 
-import { posts, getPostsByTag, getPostsBySection, countPostsByTag } from '$lib/+Data/posts.js';
+import { posts, getPostsByTag, getPostsBySection, countPostsByTag, countPostsByAITSL } from '$lib/+Data/posts.js';
 // +page.js or +limport { posts, getPostsByTag } from '$lib/+Data/posts.js';ayout.js
 export const prerender = true;
 
@@ -7,7 +7,10 @@ export function load() {
   console.log("math_engage posts", getPostsBySection(posts, "math_engage"));
   return {
     work_posts: getPostsByTag(posts, "work"), 
-    engagement_posts: getPostsByTag(posts, "engagement"), 
+    classroom_management_posts: getPostsBySection(posts, "classroom_management"), 
+    behaviour_management_posts: getPostsBySection(posts, "behaviour_management"), 
+    engagement_posts: getPostsBySection(posts, "engagement"), 
+    differentiation_posts: getPostsBySection(posts, "differentiation"), 
     math_posts: getPostsByTag(posts, "math"), 
     math_engage_posts: getPostsBySection(posts, "math_engage"),
     math_access_posts: getPostsBySection(posts, "math_access"),
@@ -16,5 +19,6 @@ export function load() {
     ai_certificate_posts: getPostsByTag(posts, "certificate"),
     literacy_posts: getPostsByTag(posts, "literacy"),
     tag_count: countPostsByTag(posts),
+    aitsl_count: countPostsByAITSL(posts)
   };
 }

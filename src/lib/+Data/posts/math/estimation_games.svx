@@ -3,6 +3,7 @@ title: 'Easy Estimation Warm Ups'
 summary: "Quick estimation games are great for review, while allowing students to reason about math in a low stakes game."
 tags: ["math", "estimation"]
 sections: ["math_engage"]
+aitsl: ["1.2", "1.5", "2.1", "2.2", "3.3", "4.1"]
 ---
 <script>
   import ImageCollage from '$lib/ImageCollage/ImageCollage.svelte';

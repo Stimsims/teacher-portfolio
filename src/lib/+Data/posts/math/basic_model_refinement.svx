@@ -1,8 +1,9 @@
 ---
 title: "Basic to Refined Math Models"
 summary: "Using basic and refined models to facilitate access to lesson content and encourage creativity."
-tags: ["AITSL 2.1","AITSL 2.2"]
+tags: ["differentiation"]
 sections: ["math_access"]
+aitsl: ["2.1", "2.2"]
 ---
 
 ## Basic Model Refined Using Class Concept

@@ -1,8 +1,9 @@
 ---
 title: "Community Connected Place-Based Contexts"
 summary: "The math lesson is contextualised in examples relevant to the student's families and local community"
-tags: ["AITSL 2.1","AITSL 2.2", "Aboriginal and Torres Strait Islander Support"]
+tags: ["Aboriginal and Torres Strait Islander Support"]
 sections: ["math_access"]
+aitsl: ["2.1", "2.2"]
 ---
 
 ## Place-Based Contexts

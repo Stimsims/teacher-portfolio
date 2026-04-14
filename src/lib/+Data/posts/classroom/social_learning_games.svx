@@ -1,0 +1,11 @@
+---
+title: "Connective Contexts"
+summary: "Encouraging students to connect classroom curriculum content with their personal lives and interests."
+tags: ["student agency", "behaviour management"]
+sections: ["behaviour_management"]
+aitsl: ["2.5"]
+---
+
+# Learning Pro-Social Behaviour through Games
+
+With a suite of quick games that serve as reviews of previously learned class content, I engage and motivate students through games. This follows social learning theory, in which people learn by observation (Bandura, 1971).  Students who are growing their pro-social behaviours on a given day are brought to the front and centre of the group as leaders, allowing student's developing this skill to learn from their more experienced peers. 
