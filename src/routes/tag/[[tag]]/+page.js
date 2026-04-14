@@ -1,7 +1,6 @@
-// src/routes/tag/[tag]/+page.server.js
-import { posts } from '$lib/+Data/posts.js';
-
 export const prerender = true;
+
+import { posts } from '$lib/+Data/posts.js';
 
 export async function entries() {
   // Flatten tags + AITSL

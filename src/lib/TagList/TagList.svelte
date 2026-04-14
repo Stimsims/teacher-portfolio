@@ -9,9 +9,11 @@
 
 <ul class="tags">
   {#each tags as tag}
-    <li class="tag opal-text" on:click={() => goToTag(tag)}>
-      {tag}
-    </li>
+    <!-- <li class="tag opal-text" on:click={() => goToTag(tag)}> -->
+        <a href={`/tag/${tag}`}>
+          {tag}
+        </a>
+    <!-- </li> -->
   {/each}
 </ul>
 

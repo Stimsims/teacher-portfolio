@@ -1,7 +1,7 @@
 ---
 title: "Connective Contexts"
 summary: "Encouraging students to connect classroom curriculum content with their personal lives and interests."
-tags: ["student agency", "behaviour management"]
+tags: ["student agency", "behaviour management", "behaviour_management", "classroom_management", "lesson_planning"]
 sections: ["behaviour_management"]
 aitsl: ["2.5"]
 ---
