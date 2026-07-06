@@ -1,17 +1,31 @@
-
-import { posts, getPostsByTag, getPostsBySection, countPostsByTag, countPostsByAITSL } from '$lib/+Data/posts.js';
+import {
+  posts,
+  getPostsByTag,
+  getPostsBySection,
+  countPostsByTag,
+  countPostsByAITSL,
+} from "$lib/+Data/posts.js";
 // +page.js or +limport { posts, getPostsByTag } from '$lib/+Data/posts.js';ayout.js
 export const prerender = true;
 
 export function load() {
-  console.log("math_engage posts", getPostsBySection(posts, "math_engage"));
+  console.log(
+    "math_assessment posts",
+    getPostsBySection(posts, "math_assessment"),
+  );
   return {
-    work_posts: getPostsByTag(posts, "work"), 
-    classroom_management_posts: getPostsBySection(posts, "classroom_management"), 
-    behaviour_management_posts: getPostsBySection(posts, "behaviour_management"), 
-    engagement_posts: getPostsBySection(posts, "engagement"), 
-    differentiation_posts: getPostsBySection(posts, "differentiation"), 
-    math_posts: getPostsByTag(posts, "math"), 
+    work_posts: getPostsByTag(posts, "work"),
+    classroom_management_posts: getPostsBySection(
+      posts,
+      "classroom_management",
+    ),
+    behaviour_management_posts: getPostsBySection(
+      posts,
+      "behaviour_management",
+    ),
+    engagement_posts: getPostsBySection(posts, "engagement"),
+    differentiation_posts: getPostsBySection(posts, "differentiation"),
+    math_posts: getPostsByTag(posts, "math"),
     math_engage_posts: getPostsBySection(posts, "math_engage"),
     math_access_posts: getPostsBySection(posts, "math_access"),
     math_assessment_posts: getPostsBySection(posts, "math_assessment"),
@@ -19,6 +33,6 @@ export function load() {
     ai_certificate_posts: getPostsByTag(posts, "certificate"),
     literacy_posts: getPostsByTag(posts, "literacy"),
     tag_count: countPostsByTag(posts),
-    aitsl_count: countPostsByAITSL(posts)
+    aitsl_count: countPostsByAITSL(posts),
   };
 }
